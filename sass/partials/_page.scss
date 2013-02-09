@@ -1,5 +1,5 @@
 @import "compass/css3";
-
+@import "compass/typography";
 //-----------------------------------------------
 // The following html5-boilerplate styles should
 // probably be customized for each site
@@ -28,7 +28,6 @@ body {
 
 header {
   position: relative;
-  white-space: nowrap;
   top: 1em;
   left: 1em;
   width: 100%;
@@ -39,22 +38,34 @@ header {
       padding: 0.7em;
     }
 }
+#nav_bar ul {
+  @include horizontal-list-container;
+  display: block;
+  margin: 2em;
+    li {
+      @include horizontal-list-item (0.344em, left);
+    }
+}
 
 #nav_side {
-  position: relative;
-  top: 50%;
-  left: 1em;
+  float: left;
+  margin: 1em;
   width: 20%;
+  background-color: $main-blue;
+  color: $main-white;
+  @include clearfix;
 }
 
 #main {
+  margin: $step2-gold-em auto;
   color: $main-blue;
   background-color: $main-white;
-  float: left;
-  width: 100%;
+  width: 1.618*($step8-gold-em);
+  height: 160em;
 }
 
 #logo_header {
-  float: right;
+  float: left;
+  display: inline-block;
 }
 footer {}

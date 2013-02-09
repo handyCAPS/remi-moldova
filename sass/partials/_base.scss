@@ -18,3 +18,37 @@ $invalid-background-color: #f0dddd !default;
 $main-blue: #2E63A9;
 $main-red: #FF2A00;
 $main-white: #FFF;
+
+// modulaire schaal 16@1:1.168 in pixels
+
+$step-5-gold-px: 1.443px;
+$step-4-gold-px: 2.335px;
+$step-3-gold-px: 3.778px;
+$step-2-gold-px: 6.112px;
+$step-1-gold-px: 9.889px;
+$step1-gold-px: 16px;
+$step2-gold-px: 25.888px;
+$step3-gold-px: 41.887px;
+$step4-gold-px: 67.773px;
+$step5-gold-px: 109.657px;
+$step7-gold-px: 177.425px;
+$step8-gold-px: 287.074px;
+$step9-gold-px: 464.486px;
+$step8-gold-px: 751.538px;
+
+// modulaire schaal 1:1.618 in ems
+
+$step-5-gold-em: 0.09em;
+$step-4-gold-em: 0.146em;
+$step-3-gold-em: 0.236em;
+$step-2-gold-em: 0.382em;
+$step-1-gold-em: 0.618em;
+$step1-gold-em: 1em;
+$step2-gold-em: 1.618em;
+$step3-gold-em: 2.618em;
+$step4-gold-em: 4.236em;
+$step5-gold-em: 6.854em;
+$step7-gold-em: 11.089em;
+$step8-gold-em: 17.942em;
+$step9-gold-em: 29.03em;
+$step8-gold-em: 46.971em;
