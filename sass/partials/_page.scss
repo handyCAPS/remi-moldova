@@ -1,5 +1,6 @@
 @import "compass/css3";
 @import "compass/typography";
+@include font-face-bitstream-roman;
 //-----------------------------------------------
 // The following html5-boilerplate styles should
 // probably be customized for each site
@@ -28,20 +29,32 @@ body {
 
 header {
   position: relative;
-  top: 1em;
-  left: 1em;
+  margin: ($step4-gold-em)-($step3-gold-em) auto 0;
   width: 100%;
-  background-color: $main-red;
-    ul li {
-      list-style: none;
-      float: left;
-      padding: 0.7em;
+  background-color: $main-blue;
+    img {
+      margin: $step2-gold-em $step1-gold-em $step2-gold-em 0;
     }
 }
+
+#logo {
+  position: absolute;
+  top: $step6-gold-px;
+  left: 3.144*($step6-gold-px);
+}
+
+#slideshow {
+  border: $step-1-gold-px solid $main-white;
+}
+
 #nav_bar ul {
   @include horizontal-list-container;
+  float: left;
+  clear: both;
   display: block;
-  margin: 2em;
+  margin: 0 $step3-gold-em $step3-gold-em;
+  background-color: #CCC;
+  padding: $step2-gold-em;
     li {
       @include horizontal-list-item (0.344em, left);
     }
@@ -49,11 +62,20 @@ header {
 
 #nav_side {
   float: left;
-  margin: 1em;
-  width: 20%;
-  background-color: $main-blue;
-  color: $main-white;
-  @include clearfix;
+  margin: 0 $step3-gold-em;
+  padding: $step1-gold-em $step3-gold-em $step1-gold-em 0;
+  border: $step-3-gold-px solid $main-blue;
+  font-family: 'BitstreamVeraSansRoman', sans-serif;
+  background-color: $main-white;
+  color: inherit;
+  font-size: 1.4*($step1-gold-em);
+  line-height: 1.618;
+  clear: both;
+    li {
+      list-style: none;
+      @include pretty-bullets("../images/black-arrow-icon.png", 10px, 10px)
+    /*  background-image: url("../images/black-arrow-icon.png")*/
+    }
 }
 
 #main {
@@ -61,11 +83,11 @@ header {
   color: $main-blue;
   background-color: $main-white;
   width: 1.618*($step8-gold-em);
-  height: 160em;
+  height: 80em;
 }
 
 #logo_header {
   float: left;
-  display: inline-block;
+  /*display: inline-block;*/
 }
 footer {}

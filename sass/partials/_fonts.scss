@@ -2,3 +2,55 @@
 // see http://compass-style.org/docs/reference/compass/css3/font_face/
 
 //@import "compass/css3/font-face"
+
+@mixin font-face-bitstream-roman {
+    @font-face {
+        font-family: 'BitstreamVeraSansRoman';
+        src: url('../fonts/Bitstream_Vera/Vera-webfont.eot');
+        src: url('../fonts/Bitstream_Vera/Vera-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Bitstream_Vera/Vera-webfont.woff') format('woff'),
+             url('../fonts/Bitstream_Vera/Vera-webfont.ttf') format('truetype'),
+             url('../fonts/Bitstream_Vera/Vera-webfont.svg#BitstreamVeraSansRoman') format('svg');
+        font-weight: normal;
+        font-style: normal;   
+    }
+}
+
+@mixin font-face-bitstream-oblique {    
+    @font-face {
+        font-family: 'BitstreamVeraSansOblique';
+        src: url('../fonts/Bitstream_Vera/Vera-Italic-webfont.eot');
+        src: url('../fonts/Bitstream_Vera/Vera-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Bitstream_Vera/Vera-Italic-webfont.woff') format('woff'),
+             url('../fonts/Bitstream_Vera/Vera-Italic-webfont.ttf') format('truetype'),
+             url('../fonts/Bitstream_Vera/Vera-Italic-webfont.svg#BitstreamVeraSansOblique') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@mixin font-face-bitstream-bold {    
+    @font-face {
+        font-family: 'BitstreamVeraSansBold';
+        src: url('../fonts/Bitstream_Vera/Vera-Bold-webfont.eot');
+        src: url('../fonts/Bitstream_Vera/Vera-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Bitstream_Vera/Vera-Bold-webfont.woff') format('woff'),
+             url('../fonts/Bitstream_Vera/Vera-Bold-webfont.ttf') format('truetype'),
+             url('../fonts/Bitstream_Vera/Vera-Bold-webfont.svg#BitstreamVeraSansBold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@mixin font-face-bitstream-bold-oblique {    
+    @font-face {
+        font-family: 'BitstreamVeraSansBoldOblique';
+        src: url('../fonts/Bitstream_Vera/Vera-Bold-Italic-webfont.eot');
+        src: url('../fonts/Bitstream_Vera/Vera-Bold-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Bitstream_Vera/Vera-Bold-Italic-webfont.woff') format('woff'),
+             url('../fonts/Bitstream_Vera/Vera-Bold-Italic-webfont.ttf') format('truetype'),
+             url('../fonts/Bitstream_Vera/Vera-Bold-Italic-webfont.svg#BitstreamVeraSansBoldOblique') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        }
+    }
