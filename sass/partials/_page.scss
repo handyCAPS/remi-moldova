@@ -1,6 +1,7 @@
 @import "compass/css3";
 @import "compass/typography";
 @include font-face-bitstream-roman;
+@include font-face-hammersmith;
 //-----------------------------------------------
 // The following html5-boilerplate styles should
 // probably be customized for each site
@@ -22,7 +23,7 @@ body {
 
 #container {
   position: relative;
-  width: 80%;
+  width: 90%;
   height: 100%;
   margin: 0 auto;
 }
@@ -47,6 +48,9 @@ header {
 }
 
 #slideshow {
+  /*position: relative;
+  left: -($step3-gold-em);
+  top: -($step2-gold-em);*/
   float: left;
   border: $step-1-gold-px solid $main-white;
 }
@@ -56,13 +60,13 @@ header {
   @include border-blue;
   float: left;
   position: relative;
-  left: -($step4-gold-em);
+  left: -($linkser);
   clear: both;
   display: block;
   margin: 0 $step3-gold-em $step3-gold-em $step-1-gold-em;
   background-color: $main-white;
   padding: $step1-gold-em $step2-gold-em;
-  font-family: 'BitstreamVeraSansRoman', sans-serif;
+  font-family: 'HammersmithOneRegular', sans-serif;
   line-height: 1.4;
     li {
       @include horizontal-list-item (0.344em, left);
@@ -80,8 +84,18 @@ header {
 .headlines {
   float: left;
   color: $main-white;
-  line-height: 1;
+  line-height: 1.112;
   font-size: $step-1-gold-em;
+  margin-top: 1em;
+  /*height: $step6-gold-em;*/
+    h3 {
+      font-size: $step2-gold-em;
+      padding: 0 $step-1-gold-em;
+    }
+    p {
+      /*@include ellipsis(wrap);*/
+      padding: 0 $step1-gold-em;
+    }
 }
 
 
@@ -91,22 +105,23 @@ header {
 
 #headline2 {
   @include headliner;
-  padding-left: $step3-gold-em;
+  margin-left: $step5-gold-em;
 }
 
 #headline3 {
   @include headliner;
-  padding-left: $step5-gold-em;
+  margin-left: $step7-gold-em;
 }
 
 #nav_side {
   @include border-blue;
   position: relative;
-  left: -($step4-gold-em);
+  /*top: ($step2-gold-16)+($step8-gold-px);*/
+  left: -(($linkser)+(2*($step-3-gold-16)));
   float: left;
   margin: 0 $step3-gold-em 0 $step1-gold-em;
   padding: $step1-gold-em $step3-gold-em $step1-gold-em 0;
-  font-family: 'BitstreamVeraSansRoman', sans-serif;
+  font-family: 'HammersmithOneRegular', sans-serif;
   background-color: $main-white;
   color: inherit;
   font-size: 1.112*($step1-gold-em);
@@ -127,11 +142,36 @@ header {
 }
 
 #main {
-  margin: $step2-gold-em auto;
+  margin: $step3-gold-em auto;
+  padding: $step2-gold-em $step2-gold-em $step3-gold-em 0;
   color: $main-blue;
   background-color: $main-white;
   width: 76%;
-  height: 80em;
+}
+
+.main_content {
+  
+    p {
+      margin: 0 auto;
+      @include clearfix;
+      @include columns($step1-gold-em 2);
+      @include column-gap($step3-gold-em);
+      color: darken($main-white, 80);
+      width: 80%;
+      position: relative;
+      left: -($step3-gold-em);
+      text-align: justify;
+      text-indent: $step2-gold-em;
+      line-height: $step2-gold-em;
+    }
+    h2 {
+      margin: $step2-gold-em 0 $step2-gold-em $step2-gold-em;
+    }
+    
+}
+
+#front-page {
+  
 }
 
 #logo_header {

@@ -54,3 +54,17 @@
         font-style: normal;
         }
     }
+
+@mixin font-face-hammersmith {
+    @font-face {
+    font-family: 'HammersmithOneRegular';
+    src: url('../fonts/Hammersmith/HammersmithOne-webfont.eot');
+    src: url('../fonts/Hammersmith/HammersmithOne-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Hammersmith/HammersmithOne-webfont.woff') format('woff'),
+         url('../fonts/Hammersmith/HammersmithOne-webfont.ttf') format('truetype'),
+         url('../fonts/Hammersmith/HammersmithOne-webfont.svg#HammersmithOneRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+}

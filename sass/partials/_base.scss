@@ -24,7 +24,7 @@ $main-white: #FFF;
 $step-5-gold-16: 1.443;
 $step-4-gold-16: 2.335;
 $step-3-gold-16: 3.778;
-$step-2-gold-px: 6.112;
+$step-2-gold-16: 6.112;
 $step-1-gold-16: 9.889;
 $step1-gold-16: 16;
 $step2-gold-16: 25.888;
@@ -73,13 +73,33 @@ $step9-gold-em: 46.971em;
 
 //temp mixins
 
-@mixin headliner {
-  margin-top: $step2-gold-em;
-  width: 3.778*($step5-gold-em);
-  height: 2.618*($step4-gold-em);
-  overflow: hidden;
-}
 
 @mixin border-blue {
     border: $step-3-gold-px solid $main-blue;
+}
+
+@mixin border-white($borderEdge) {
+    border: $borderEdge solid $main-white;
+}
+
+@mixin headliner {
+  /*@include border-white($step-3-gold-px);*/  
+  margin-top: $step-1-gold-em;
+  width: 3.778*($step5-gold-em);
+  overflow: hidden;
+    
+}
+
+$linkser: ($step-1-gold-16)+($step-3-gold-px);
+
+// gradients
+
+@mixin gradient-red{
+    background: #ecc1bc; /* Old browsers */
+background: -moz-linear-gradient(top, #ecc1bc 0%, #df978f 17%, #d26f64 33%, #820d00 50%, #d41500 69%, #d41500 98%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ecc1bc), color-stop(17%,#df978f), color-stop(33%,#d26f64), color-stop(50%,#820d00), color-stop(69%,#d41500), color-stop(98%,#d41500)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ecc1bc 0%,#df978f 17%,#d26f64 33%,#820d00 50%,#d41500 69%,#d41500 98%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ecc1bc 0%,#df978f 17%,#d26f64 33%,#820d00 50%,#d41500 69%,#d41500 98%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #ecc1bc 0%,#df978f 17%,#d26f64 33%,#820d00 50%,#d41500 69%,#d41500 98%); /* IE10+ */
+background: linear-gradient(to bottom, #ecc1bc 0%,#df978f 17%,#d26f64 33%,#820d00 50%,#d41500 69%,#d41500 98%); /* W3C */
 }
