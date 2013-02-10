@@ -19,9 +19,63 @@ $main-blue: #2E63A9;
 $main-red: #FF2A00;
 $main-white: #FFF;
 
+
+$em-base: 16;
+
 // modulaire schaal 1:1.168
 
-$step-5-gold-16: 1.443;
+$step1-gold: $em-base;
+$step-1-gold: ($em-base)/1.618;
+$step-2-gold: ($step-1-gold)/1.618;
+$step-3-gold: ($step-2-gold)/1.618;
+$step-4-gold: ($step-3-gold)/1.618;
+$step-5-gold: ($step-4-gold)/1.618;
+$step2-gold: 1.618*($em-base);
+$step3-gold: 1.618*($step2-gold);
+$step4-gold: 1.618*($step3-gold);
+$step5-gold: 1.618*($step4-gold);
+$step6-gold: 1.618*($step5-gold);
+$step7-gold: 1.618*($step6-gold);
+$step8-gold: 1.618*($step7-gold);
+$step9-gold: 1.618*($step8-gold);
+
+// modulaire schaal 1:1.168 in ems
+
+/*$step1-gold-em: ($em-base)em;
+$step-1-gold-em: 1.618/($em-base)em;
+$step-2-gold-em: 1.618/($step-1-gold-em);
+$step-3-gold-em: 1.618/($step-2-gold-em);
+$step-4-gold-em: 1.618/($step-3-gold-em);
+$step-5-gold-em: 1.618/($step-4-gold-em);
+$step2-gold-em: 1.618*($em-base)em;
+$step3-gold-em: 1.618*($step2-gold-em);
+$step4-gold-em: 1.618*($step3-gold-em);
+$step5-gold-em: 1.618*($step4-gold-em);
+$step6-gold-em: 1.618*($step5-gold-em);
+$step7-gold-em: 1.618*($step6-gold-em);
+$step8-gold-em: 1.618*($step7-gold-em);
+$step9-gold-em: 1.618*($step8-gold-em);
+
+// modulaire schaal 1:1.168 in pixels
+
+$step1-gold-px: ($em-base)px;
+$step-1-gold-px: 1.618/($em-base);
+$step-2-gold-px: 1.618/($step-1-gold-px);
+$step-3-gold-px: 1.618/($step-2-gold-px);
+$step-4-gold-px: 1.618/($step-3-gold-px);
+$step-5-gold-px: 1.618/($step-4-gold-px);
+$step2-gold-px: 1.618*($em-base)px;
+$step3-gold-px: 1.618*($step2-gold-px);
+$step4-gold-px: 1.618*($step3-gold-px);
+$step5-gold-px: 1.618*($step4-gold-px);
+$step6-gold-px: 1.618*($step5-gold-px);
+$step7-gold-px: 1.618*($step6-gold-px);
+$step8-gold-px: 1.618*($step7-gold-px);
+$step9-gold-px: 1.618*($step8-gold-px);*/
+
+
+
+/*$step-5-gold-16: 1.443;
 $step-4-gold-16: 2.335;
 $step-3-gold-16: 3.778;
 $step-2-gold-px: 6.112;
@@ -68,18 +122,18 @@ $step5-gold-em: 6.854em;
 $step6-gold-em: 11.089em;
 $step7-gold-em: 17.942em;
 $step8-gold-em: 29.03em;
-$step9-gold-em: 46.971em;
+$step9-gold-em: 46.971em;*/
 
 
 //temp mixins
 
 @mixin headliner {
-  margin-top: $step2-gold-em;
-  width: 3.778*($step5-gold-em);
-  height: 2.618*($step4-gold-em);
+  margin-top: ($step2-gold)em;
+  width: 3.778*($step2-gold)em;
+  height: 2.618*($step2-gold)em;
   overflow: hidden;
 }
 
 @mixin border-blue {
-    border: $step-3-gold-px solid $main-blue;
+    border: ($step-3-gold)px solid $main-blue;
 }
