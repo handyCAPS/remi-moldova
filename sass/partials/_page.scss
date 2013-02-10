@@ -29,11 +29,11 @@ body {
 
 header {
   position: relative;
-  margin: ($step3-gold)em auto 0;
+  margin: ($step4-gold-em)-($step3-gold-em) auto 0;
   width: 100%;
   background-color: $main-blue;
     img {
-      margin: ($step2-gold)em ($step1-gold)em ($step2-gold)em 0;
+      margin: $step2-gold-em $step1-gold-em $step2-gold-em 0;
     }
 }
 .slideshow {
@@ -42,13 +42,13 @@ header {
 
 #logo {
   position: absolute;
-  top: ($step6-gold)px;
-  left: 3.178*($step6-gold)px;
+  top: $step6-gold-px;
+  left: 3.178*($step6-gold-px);
 }
 
 #slideshow {
   float: left;
-  border: ($step-1-gold)px solid $main-white;
+  border: $step-1-gold-px solid $main-white;
 }
 
 #nav_bar ul {
@@ -56,16 +56,17 @@ header {
   @include border-blue;
   float: left;
   position: relative;
-  left: -($step4-gold)em;
+  left: -($step4-gold-em);
   clear: both;
   display: block;
-  margin: 0 ($step3-gold)em ($step3-gold)em ($step-1-gold)em;
+  margin: 0 $step3-gold-em $step3-gold-em $step-1-gold-em;
   background-color: $main-white;
-  padding: ($step2-gold)em;
+  padding: $step1-gold-em $step2-gold-em;
   font-family: 'BitstreamVeraSansRoman', sans-serif;
-  font-weight: bold;
+  line-height: 1.4;
     li {
-      @include horizontal-list-item (($step-1-gold)em, left);
+      @include horizontal-list-item (0.344em, left);
+      padding: 0 0 0 $step3-gold-em;
     }
       a {
         color: inherit;
@@ -80,7 +81,7 @@ header {
   float: left;
   color: $main-white;
   line-height: 1;
-  font-size: ($step-1-gold)em;
+  font-size: $step-1-gold-em;
 }
 
 
@@ -90,26 +91,26 @@ header {
 
 #headline2 {
   @include headliner;
-  padding-left: ($step3-gold)em;
+  padding-left: $step3-gold-em;
 }
 
 #headline3 {
   @include headliner;
-  padding-left: ($step5-gold)em;
+  padding-left: $step5-gold-em;
 }
 
 #nav_side {
   @include border-blue;
   position: relative;
-  left: -($step4-gold)em;
+  left: -($step4-gold-em);
   float: left;
-  margin: 0 ($step3-gold)em 0 ($step1-gold)em;
-  padding: ($step1-gold)em ($step3-gold)em ($step1-gold)em 0;
+  margin: 0 $step3-gold-em 0 $step1-gold-em;
+  padding: $step1-gold-em $step3-gold-em $step1-gold-em 0;
   font-family: 'BitstreamVeraSansRoman', sans-serif;
   background-color: $main-white;
   color: inherit;
-  font-size: 1.112*($step1-gold)em;
-  line-height: 1.618;
+  font-size: 1.112*($step1-gold-em);
+  line-height: 2.618;
   clear: both;
     li {
       list-style: none;
@@ -126,7 +127,7 @@ header {
 }
 
 #main {
-  margin: ($step2-gold)em auto;
+  margin: $step2-gold-em auto;
   color: $main-blue;
   background-color: $main-white;
   width: 76%;
