@@ -65,7 +65,21 @@ $step2-gold-em: 1.618em;
 $step3-gold-em: 2.618em;
 $step4-gold-em: 4.236em;
 $step5-gold-em: 6.854em;
-$step7-gold-em: 11.089em;
-$step8-gold-em: 17.942em;
-$step9-gold-em: 29.03em;
-$step8-gold-em: 46.971em;
+$step6-gold-em: 11.089em;
+$step7-gold-em: 17.942em;
+$step8-gold-em: 29.03em;
+$step9-gold-em: 46.971em;
+
+
+//temp mixins
+
+@mixin headliner {
+  margin-top: $step2-gold-em;
+  width: 3.778*($step5-gold-em);
+  height: 2.618*($step4-gold-em);
+  overflow: hidden;
+}
+
+@mixin border-blue {
+    border: $step-3-gold-px solid $main-blue;
+}

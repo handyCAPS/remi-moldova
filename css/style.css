@@ -357,33 +357,41 @@ header img {
   margin: 1.618em 1em 1.618em 0;
 }
 
-/* line 40, ../sass/partials/_page.scss */
+/* line 39, ../sass/partials/_page.scss */
+.slideshow {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 43, ../sass/partials/_page.scss */
 #logo {
   position: absolute;
   top: 177.425px;
-  left: 557.8242px;
+  left: 563.85665px;
 }
 
-/* line 46, ../sass/partials/_page.scss */
+/* line 49, ../sass/partials/_page.scss */
 #slideshow {
+  float: left;
   border: 9.889px solid white;
 }
 
-/* line 50, ../sass/partials/_page.scss */
+/* line 54, ../sass/partials/_page.scss */
 #nav_bar ul {
   margin: 0;
   padding: 0;
   border: 0;
   overflow: hidden;
   *zoom: 1;
+  border: 3.778px solid #2e63a9;
   float: left;
   clear: both;
   display: block;
   margin: 0 2.618em 2.618em;
-  background-color: #CCC;
+  background-color: white;
   padding: 1.618em;
 }
-/* line 58, ../sass/partials/_page.scss */
+/* line 63, ../sass/partials/_page.scss */
 #nav_bar ul li {
   list-style-image: none;
   list-style-type: none;
@@ -406,21 +414,66 @@ header img {
 #nav_bar ul li.last {
   padding-right: 0;
 }
+/* line 66, ../sass/partials/_page.scss */
+#nav_bar ul a {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 69, ../sass/partials/_page.scss */
+#nav_bar ul a:hover {
+  text-decoration: underline;
+}
 
-/* line 63, ../sass/partials/_page.scss */
-#nav_side {
+/* line 75, ../sass/partials/_page.scss */
+.headlines {
   float: left;
-  margin: 0 2.618em;
-  padding: 1em 2.618em 1em 0;
+  color: white;
+  line-height: 1;
+  font-size: 0.618em;
+}
+
+/* line 83, ../sass/partials/_page.scss */
+#headline1 {
+  margin-top: 1.618em;
+  width: 25.89441em;
+  height: 11.08985em;
+  overflow: hidden;
+}
+
+/* line 87, ../sass/partials/_page.scss */
+#headline2 {
+  margin-top: 1.618em;
+  width: 25.89441em;
+  height: 11.08985em;
+  overflow: hidden;
+  padding-left: 2.618em;
+}
+
+/* line 92, ../sass/partials/_page.scss */
+#headline3 {
+  margin-top: 1.618em;
+  width: 25.89441em;
+  height: 11.08985em;
+  overflow: hidden;
+  padding-left: 6.854em;
+}
+
+/* line 97, ../sass/partials/_page.scss */
+#nav_side {
   border: 3.778px solid #2e63a9;
+  position: relative;
+  left: -4.236em;
+  float: left;
+  margin: 0 2.618em 0 1em;
+  padding: 1em 2.618em 1em 0;
   font-family: 'BitstreamVeraSansRoman', sans-serif;
   background-color: white;
   color: inherit;
-  font-size: 1.4em;
+  font-size: 1.112em;
   line-height: 1.618;
   clear: both;
 }
-/* line 74, ../sass/partials/_page.scss */
+/* line 110, ../sass/partials/_page.scss */
 #nav_side li {
   list-style: none;
   margin-left: 0;
@@ -431,17 +484,26 @@ header img {
   background: url('/images/../images/black-arrow-icon.png?1360444372') no-repeat 2px 4px;
   list-style-type: none;
 }
+/* line 115, ../sass/partials/_page.scss */
+#nav_side a {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 118, ../sass/partials/_page.scss */
+#nav_side a:hover {
+  text-decoration: underline;
+}
 
-/* line 81, ../sass/partials/_page.scss */
+/* line 124, ../sass/partials/_page.scss */
 #main {
   margin: 1.618em auto;
   color: #2e63a9;
   background-color: white;
-  width: 75.99908em;
+  width: 76%;
   height: 80em;
 }
 
-/* line 89, ../sass/partials/_page.scss */
+/* line 132, ../sass/partials/_page.scss */
 #logo_header {
   float: left;
   /*display: inline-block;*/
