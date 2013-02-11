@@ -1,0 +1,237 @@
+// font-face fonts
+// see http://compass-style.org/docs/reference/compass/css3/font_face/
+
+//@import "compass/css3/font-face"
+
+@mixin font-face-bitstream-roman {
+    @font-face {
+        font-family: 'BitstreamVeraSansRoman';
+        src: url('../fonts/Bitstream_Vera/Vera-webfont.eot');
+        src: url('../fonts/Bitstream_Vera/Vera-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Bitstream_Vera/Vera-webfont.woff') format('woff'),
+             url('../fonts/Bitstream_Vera/Vera-webfont.ttf') format('truetype'),
+             url('../fonts/Bitstream_Vera/Vera-webfont.svg#BitstreamVeraSansRoman') format('svg');
+        font-weight: normal;
+        font-style: normal;   
+    }
+}
+
+@mixin font-face-bitstream-oblique {    
+    @font-face {
+        font-family: 'BitstreamVeraSansOblique';
+        src: url('../fonts/Bitstream_Vera/Vera-Italic-webfont.eot');
+        src: url('../fonts/Bitstream_Vera/Vera-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Bitstream_Vera/Vera-Italic-webfont.woff') format('woff'),
+             url('../fonts/Bitstream_Vera/Vera-Italic-webfont.ttf') format('truetype'),
+             url('../fonts/Bitstream_Vera/Vera-Italic-webfont.svg#BitstreamVeraSansOblique') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@mixin font-face-bitstream-bold {    
+    @font-face {
+        font-family: 'BitstreamVeraSansBold';
+        src: url('../fonts/Bitstream_Vera/Vera-Bold-webfont.eot');
+        src: url('../fonts/Bitstream_Vera/Vera-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Bitstream_Vera/Vera-Bold-webfont.woff') format('woff'),
+             url('../fonts/Bitstream_Vera/Vera-Bold-webfont.ttf') format('truetype'),
+             url('../fonts/Bitstream_Vera/Vera-Bold-webfont.svg#BitstreamVeraSansBold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@mixin font-face-bitstream-bold-oblique {    
+    @font-face {
+        font-family: 'BitstreamVeraSansBoldOblique';
+        src: url('../fonts/Bitstream_Vera/Vera-Bold-Italic-webfont.eot');
+        src: url('../fonts/Bitstream_Vera/Vera-Bold-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Bitstream_Vera/Vera-Bold-Italic-webfont.woff') format('woff'),
+             url('../fonts/Bitstream_Vera/Vera-Bold-Italic-webfont.ttf') format('truetype'),
+             url('../fonts/Bitstream_Vera/Vera-Bold-Italic-webfont.svg#BitstreamVeraSansBoldOblique') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        }
+    }
+
+@mixin font-face-hammersmith {
+    @font-face {
+    font-family: 'HammersmithOneRegular';
+    src: url('../fonts/Hammersmith/HammersmithOne-webfont.eot');
+    src: url('../fonts/Hammersmith/HammersmithOne-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Hammersmith/HammersmithOne-webfont.woff') format('woff'),
+         url('../fonts/Hammersmith/HammersmithOne-webfont.ttf') format('truetype'),
+         url('../fonts/Hammersmith/HammersmithOne-webfont.svg#HammersmithOneRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+}
+
+@mixin font-face-sans-pro-semibold-italic {
+    @font-face {
+        font-family: 'SourceSansProSemiboldItalic';
+        src: url('../fonts/Sans_Pro/SourceSansPro-SemiboldIt-webfont.eot');
+        src: url('../fonts/Sans_Pro/SourceSansPro-SemiboldIt-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Sans_Pro/SourceSansPro-SemiboldIt-webfont.woff') format('woff'),
+             url('../fonts/Sans_Pro/SourceSansPro-SemiboldIt-webfont.ttf') format('truetype'),
+             url('../fonts/Sans_Pro/SourceSansPro-SemiboldIt-webfont.svg#SourceSansProSemiboldItalic') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+
+@mixin font-face-sans-pro-bold {    
+    @font-face {
+        font-family: 'SourceSansProBold';
+        src: url('../fonts/Sans_Pro/SourceSansPro-Bold-webfont.eot');
+        src: url('../fonts/Sans_Pro/SourceSansPro-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Sans_Pro/SourceSansPro-Bold-webfont.woff') format('woff'),
+             url('../fonts/Sans_Pro/SourceSansPro-Bold-webfont.ttf') format('truetype'),
+             url('../fonts/Sans_Pro/SourceSansPro-Bold-webfont.svg#SourceSansProBold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+    
+@mixin font-face-sans-pro-bold-italic {  
+    @font-face {
+        font-family: 'SourceSansProBoldItalic';
+        src: url('../fonts/Sans_Pro/SourceSansPro-BoldIt-webfont.eot');
+        src: url('../fonts/Sans_Pro/SourceSansPro-BoldIt-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Sans_Pro/SourceSansPro-BoldIt-webfont.woff') format('woff'),
+             url('../fonts/Sans_Pro/SourceSansPro-BoldIt-webfont.ttf') format('truetype'),
+             url('../fonts/Sans_Pro/SourceSansPro-BoldIt-webfont.svg#SourceSansProBoldItalic') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+
+@mixin font-face-sans-pro-black {    
+    @font-face {
+        font-family: 'SourceSansProBlack';
+        src: url('../fonts/Sans_Pro/SourceSansPro-Black-webfont.eot');
+        src: url('../fonts/Sans_Pro/SourceSansPro-Black-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Sans_Pro/SourceSansPro-Black-webfont.woff') format('woff'),
+             url('../fonts/Sans_Pro/SourceSansPro-Black-webfont.ttf') format('truetype'),
+             url('../fonts/Sans_Pro/SourceSansPro-Black-webfont.svg#SourceSansProBlack') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+    
+@mixin font-face-sans-pro-black-italic {    
+    @font-face {
+        font-family: 'SourceSansProBlackItalic';
+        src: url('../fonts/Sans_Pro/SourceSansPro-BlackIt-webfont.eot');
+        src: url('../fonts/Sans_Pro/SourceSansPro-BlackIt-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Sans_Pro/SourceSansPro-BlackIt-webfont.woff') format('woff'),
+             url('../fonts/Sans_Pro/SourceSansPro-BlackIt-webfont.ttf') format('truetype'),
+             url('../fonts/Sans_Pro/SourceSansPro-BlackIt-webfont.svg#SourceSansProBlackItalic') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+
+@mixin font-face-sans-pro-extralight {    
+    @font-face {
+        font-family: 'SourceSansProExtraLight';
+        src: url('../fonts/Sans_Pro/SourceSansPro-ExtraLight-webfont.eot');
+        src: url('../fonts/Sans_Pro/SourceSansPro-ExtraLight-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Sans_Pro/SourceSansPro-ExtraLight-webfont.woff') format('woff'),
+             url('../fonts/Sans_Pro/SourceSansPro-ExtraLight-webfont.ttf') format('truetype'),
+             url('../fonts/Sans_Pro/SourceSansPro-ExtraLight-webfont.svg#SourceSansProExtraLight') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+
+@mixin font-face-sans-pro-extralight-italic {    
+    @font-face {
+        font-family: 'SourceSansProExtraLightItalic';
+        src: url('../fonts/Sans_Pro/SourceSansPro-ExtraLightIt-webfont.eot');
+        src: url('../fonts/Sans_Pro/SourceSansPro-ExtraLightIt-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Sans_Pro/SourceSansPro-ExtraLightIt-webfont.woff') format('woff'),
+             url('../fonts/Sans_Pro/SourceSansPro-ExtraLightIt-webfont.ttf') format('truetype'),
+             url('../fonts/Sans_Pro/SourceSansPro-ExtraLightIt-webfont.svg#SourceSansProExtraLightItalic') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+
+@mixin font-face-sans-pro-light {    
+    @font-face {
+        font-family: 'SourceSansProLight';
+        src: url('../fonts/Sans_Pro/SourceSansPro-Light-webfont.eot');
+        src: url('../fonts/Sans_Pro/SourceSansPro-Light-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Sans_Pro/SourceSansPro-Light-webfont.woff') format('woff'),
+             url('../fonts/Sans_Pro/SourceSansPro-Light-webfont.ttf') format('truetype'),
+             url('../fonts/Sans_Pro/SourceSansPro-Light-webfont.svg#SourceSansProLight') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+
+@mixin font-face-sans-pro-light-italic {    
+    @font-face {
+        font-family: 'SourceSansProLightItalic';
+        src: url('../fonts/Sans_Pro/SourceSansPro-LightIt-webfont.eot');
+        src: url('../fonts/Sans_Pro/SourceSansPro-LightIt-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Sans_Pro/SourceSansPro-LightIt-webfont.woff') format('woff'),
+             url('../fonts/Sans_Pro/SourceSansPro-LightIt-webfont.ttf') format('truetype'),
+             url('../fonts/Sans_Pro/SourceSansPro-LightIt-webfont.svg#SourceSansProLightItalic') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+
+@mixin font-face-sans-pro-regular {    
+    @font-face {
+        font-family: 'SourceSansProRegular';
+        src: url('../fonts/Sans_Pro/SourceSansPro-Regular-webfont.eot');
+        src: url('../fonts/Sans_Pro/SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Sans_Pro/SourceSansPro-Regular-webfont.woff') format('woff'),
+             url('../fonts/Sans_Pro/SourceSansPro-Regular-webfont.ttf') format('truetype'),
+             url('../fonts/Sans_Pro/SourceSansPro-Regular-webfont.svg#SourceSansProRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+
+@mixin font-face-sans-pro-italic {    
+    @font-face {
+        font-family: 'SourceSansProItalic';
+        src: url('../fonts/Sans_Pro/SourceSansPro-It-webfont.eot');
+        src: url('../fonts/Sans_Pro/SourceSansPro-It-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Sans_Pro/SourceSansPro-It-webfont.woff') format('woff'),
+             url('../fonts/Sans_Pro/SourceSansPro-It-webfont.ttf') format('truetype'),
+             url('../fonts/Sans_Pro/SourceSansPro-It-webfont.svg#SourceSansProItalic') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+
+@mixin font-face-sans-pro-semibold {    
+    @font-face {
+        font-family: 'SourceSansProSemibold';
+        src: url('../fonts/Sans_Pro/SourceSansPro-Semibold-webfont.eot');
+        src: url('../fonts/Sans_Pro/SourceSansPro-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Sans_Pro/SourceSansPro-Semibold-webfont.woff') format('woff'),
+             url('../fonts/Sans_Pro/SourceSansPro-Semibold-webfont.ttf') format('truetype'),
+             url('../fonts/Sans_Pro/SourceSansPro-Semibold-webfont.svg#SourceSansProSemibold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}

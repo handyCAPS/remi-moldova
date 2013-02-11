@@ -1,0 +1,106 @@
+// This file must be imported before loading html5-boilerplate
+
+// base
+$line-height: 1.4 !default;
+$font-color: #222 !default;
+
+$link-color: #00e !default;
+$link-hover-color: #06e !default;
+$link-visited-color: #551a8b !default;
+
+$selected-font-color: #fff !default;
+$selected-background-color: #ff5e99 !default;
+
+$invalid-background-color: #f0dddd !default;
+
+// custom colors
+
+$main-blue: #2E63A9;
+$main-red: #FF2A00;
+$main-white: #FFF;
+
+// modulaire schaal 1:1.168
+
+$step-5-gold-16: 1.443;
+$step-4-gold-16: 2.335;
+$step-3-gold-16: 3.778;
+$step-2-gold-16: 6.112;
+$step-1-gold-16: 9.889;
+$step1-gold-16: 16;
+$step2-gold-16: 25.888;
+$step3-gold-16: 41.887;
+$step4-gold-16: 67.773;
+$step5-gold-16: 109.657;
+$step6-gold-16: 177.425;
+$step7-gold-16: 287.074;
+$step8-gold-16: 464.486;
+$step9-gold-16: 751.538;
+
+// modulaire schaal 16@1:1.168 in pixels
+
+$step-5-gold-px: 1.443px;
+$step-4-gold-px: 2.335px;
+$step-3-gold-px: 3.778px;
+$step-2-gold-px: 6.112px;
+$step-1-gold-px: 9.889px;
+$step1-gold-px: 16px;
+$step2-gold-px: 25.888px;
+$step3-gold-px: 41.887px;
+$step4-gold-px: 67.773px;
+$step5-gold-px: 109.657px;
+$step6-gold-px: 177.425px;
+$step7-gold-px: 287.074px;
+$step8-gold-px: 464.486px;
+$step9-gold-px: 751.538px;
+
+// modulaire schaal 1:1.618 in ems
+
+$step-5-gold-em: 0.09em;
+$step-4-gold-em: 0.146em;
+$step-3-gold-em: 0.236em;
+$step-2-gold-em: 0.382em;
+$step-1-gold-em: 0.618em;
+$step1-gold-em: 1em;
+$step2-gold-em: 1.618em;
+$step3-gold-em: 2.618em;
+$step4-gold-em: 4.236em;
+$step5-gold-em: 6.854em;
+$step6-gold-em: 11.089em;
+$step7-gold-em: 17.942em;
+$step8-gold-em: 29.03em;
+$step9-gold-em: 46.971em;
+
+
+//temp mixins
+
+
+@mixin border-blue {
+    border: $step-3-gold-px solid $main-blue;
+}
+
+@mixin border-white($borderEdge) {
+    border: $borderEdge solid $main-white;
+}
+
+@mixin headliner {
+  /*@include border-white($step-3-gold-px);*/  
+  margin-top: $step-1-gold-em;
+  width: 3.778*($step5-gold-em);
+  overflow: hidden;
+  
+    
+}
+
+$linkser: ($step-1-gold-16)+($step-3-gold-px);
+
+// gradients
+
+@mixin gradient-red{
+    background: #ecc1bc; /* Old browsers */
+background: -moz-linear-gradient(top, #ecc1bc 0%, #df978f 17%, #d26f64 33%, #820d00 50%, #d41500 69%, #d41500 98%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ecc1bc), color-stop(17%,#df978f), color-stop(33%,#d26f64), color-stop(50%,#820d00), color-stop(69%,#d41500), color-stop(98%,#d41500)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ecc1bc 0%,#df978f 17%,#d26f64 33%,#820d00 50%,#d41500 69%,#d41500 98%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ecc1bc 0%,#df978f 17%,#d26f64 33%,#820d00 50%,#d41500 69%,#d41500 98%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #ecc1bc 0%,#df978f 17%,#d26f64 33%,#820d00 50%,#d41500 69%,#d41500 98%); /* IE10+ */
+background: linear-gradient(to bottom, #ecc1bc 0%,#df978f 17%,#d26f64 33%,#820d00 50%,#d41500 69%,#d41500 98%); /* W3C */
+}
