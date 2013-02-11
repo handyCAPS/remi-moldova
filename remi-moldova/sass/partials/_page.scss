@@ -26,6 +26,32 @@ body {
   width: 90%;
   height: 100%;
   margin: 0 auto;
+
+}
+
+#site_name {
+  @include border-white($step-4-gold-px);
+  border-left: $step-4-gold-px solid $main-blue;
+  padding-right: $step-2-gold-em;
+  position: absolute;
+  color: $main-white;
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
+  letter-spacing: 3px;
+  background-color: $main-blue;
+  top: $step4-gold-em;
+  /*left: -($step-4-gold-px);*/
+      h1 {
+      margin: 0;
+      padding: $step-3-gold-em $step-1-gold-em $step-3-gold-em 0;
+      text-transform: uppercase;
+      
+      }
+      p {
+        font-size: $step-1-gold-em;
+      }
+      
+    
 }
 
 header {
@@ -150,7 +176,35 @@ header {
   color: $main-blue;
   background-color: $main-white;
   width: 76%;
-  font-family: 'SourceSansProRegular', sans-serif;
+  font-family: Helvetica, sans-serif;
+}
+
+#doneer_buttons {
+  float: right;
+  clear: both;
+  position: relative;
+  left: -($step6-gold-em);
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#doneer, #sponsor {
+  @include border-radius($step1-gold-em,$step2-gold-em);
+  @include gradient-red;
+  @include multi-transition(all, 1s, ease, 2s);
+  padding: $step-2-gold-em $step2-gold-em;
+  margin: 0 0 0 $step1-gold-em;
+  display: inline-block;
+  &:hover {
+      position: relative;
+      left: 0.618px;
+      top: 1.618px;
+    }
+    a {
+      color: $main-white;
+      text-decoration: none;
+    }
+    
 }
 
 .main_content {
@@ -158,10 +212,11 @@ header {
     p {
       margin: 0 auto;
       @include clearfix;
-      @include columns($step1-gold-em 2);
+      @include column-width(36%);
+      @include column-count(2);
       @include column-gap($step3-gold-em);
       color: darken($main-white, 80);
-      width: 80%;
+      max-width: 80%;
       position: relative;
       left: -($step3-gold-em);
       text-align: justify;
@@ -169,7 +224,9 @@ header {
       line-height: 1.4;
     }
     h2 {
-      margin: $step2-gold-em 0 $step2-gold-em $step2-gold-em;
+      @include border-bottom($main-blue, $step-5-gold-px);
+      padding: $step1-gold-em 0 $step1-gold-em $step2-gold-em;
+      max-width: 68%;
     }
     
 }

@@ -87,8 +87,18 @@ $step9-gold-em: 46.971em;
   margin-top: $step-1-gold-em;
   width: 3.778*($step5-gold-em);
   overflow: hidden;
-  
-    
+    p {
+        text-align: justify;
+        }    
+}
+
+@mixin border-nosides($borderColor, $borderWidth) {
+    border-top: $borderWidth solid $borderColor;
+    border-bottom: $borderWidth solid $borderColor;
+}
+
+@mixin border-bottom($borderColor, $borderWidth) {
+    border-bottom: $borderWidth solid $borderColor;
 }
 
 $linkser: ($step-1-gold-16)+($step-3-gold-px);
@@ -103,4 +113,12 @@ background: -webkit-linear-gradient(top, #ecc1bc 0%,#df978f 17%,#d26f64 33%,#820
 background: -o-linear-gradient(top, #ecc1bc 0%,#df978f 17%,#d26f64 33%,#820d00 50%,#d41500 69%,#d41500 98%); /* Opera 11.10+ */
 background: -ms-linear-gradient(top, #ecc1bc 0%,#df978f 17%,#d26f64 33%,#820d00 50%,#d41500 69%,#d41500 98%); /* IE10+ */
 background: linear-gradient(to bottom, #ecc1bc 0%,#df978f 17%,#d26f64 33%,#820d00 50%,#d41500 69%,#d41500 98%); /* W3C */
+}
+
+@mixin multi-transition($what, $time, $ease, $delayed) {
+    transition: $what $time $ease $delayed;
+    -moz-transition: $what $time $ease $delayed;
+    -o-transition: $what $time $ease $delayed;
+    -webkit-transition: $what $time $ease $delayed;
+    -ms-transition: $what $time $ease $delayed;
 }
