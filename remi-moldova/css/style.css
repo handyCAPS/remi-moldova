@@ -335,17 +335,25 @@ table {
   font-style: normal;
 }
 
-/* line 9, ../sass/partials/_page.scss */
+@font-face {
+  font-family: 'LatoRegular';
+  src: url("../fonts/Lato/Lato-Reg-webfont.eot");
+  src: url("../fonts/Lato/Lato-Reg-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Reg-webfont.woff") format("woff"), url("../fonts/Lato/Lato-Reg-webfont.ttf") format("truetype"), url("../fonts/Lato/Lato-Reg-webfont.svg#LatoRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 10, ../sass/partials/_page.scss */
 body, select, input, textarea {
   color: #222222;
 }
 
-/* line 19, ../sass/partials/_page.scss */
+/* line 26, ../sass/partials/_page.scss */
 body {
   background-color: #2e63a9;
 }
 
-/* line 24, ../sass/partials/_page.scss */
+/* line 31, ../sass/partials/_page.scss */
 #container {
   position: relative;
   width: 90%;
@@ -353,7 +361,7 @@ body {
   margin: 0 auto;
 }
 
-/* line 32, ../sass/partials/_page.scss */
+/* line 39, ../sass/partials/_page.scss */
 #site_name {
   border: 2.335px solid white;
   border-left: 2.335px solid #2e63a9;
@@ -367,43 +375,43 @@ body {
   top: 4.236em;
   /*left: -($step-4-gold-px);*/
 }
-/* line 44, ../sass/partials/_page.scss */
+/* line 51, ../sass/partials/_page.scss */
 #site_name h1 {
   margin: 0;
   padding: 0.236em 0.618em 0.236em 0;
   text-transform: uppercase;
 }
-/* line 50, ../sass/partials/_page.scss */
+/* line 57, ../sass/partials/_page.scss */
 #site_name p {
   font-size: 0.618em;
 }
 
-/* line 57, ../sass/partials/_page.scss */
+/* line 64, ../sass/partials/_page.scss */
 header {
   position: relative;
   margin: 1.618em auto 0;
   width: 100%;
   background-color: #2e63a9;
 }
-/* line 62, ../sass/partials/_page.scss */
+/* line 69, ../sass/partials/_page.scss */
 header img {
   margin: 1.618em 1em 1.618em 0;
 }
 
-/* line 66, ../sass/partials/_page.scss */
+/* line 73, ../sass/partials/_page.scss */
 .slideshow {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 70, ../sass/partials/_page.scss */
+/* line 77, ../sass/partials/_page.scss */
 #logo {
   position: absolute;
   top: 177.425px;
   left: 563.85665px;
 }
 
-/* line 76, ../sass/partials/_page.scss */
+/* line 83, ../sass/partials/_page.scss */
 #slideshow {
   /*position: relative;
   left: -($step3-gold-em);
@@ -412,7 +420,7 @@ header img {
   border: 9.889px solid white;
 }
 
-/* line 84, ../sass/partials/_page.scss */
+/* line 91, ../sass/partials/_page.scss */
 #nav_bar ul {
   margin: 0;
   padding: 0;
@@ -425,13 +433,13 @@ header img {
   left: -13.667px;
   clear: both;
   display: block;
-  margin: 0 2.618em 2.618em 0.618em;
+  margin: 0 2.618em 0 0.618em;
   background-color: white;
   padding: 1em 1.618em;
   font-family: Verdana, sans-serif;
   line-height: 1.4;
 }
-/* line 97, ../sass/partials/_page.scss */
+/* line 104, ../sass/partials/_page.scss */
 #nav_bar ul li {
   list-style-image: none;
   list-style-type: none;
@@ -455,17 +463,17 @@ header img {
 #nav_bar ul li.last {
   padding-right: 0;
 }
-/* line 101, ../sass/partials/_page.scss */
+/* line 108, ../sass/partials/_page.scss */
 #nav_bar ul a {
   color: inherit;
   text-decoration: none;
 }
-/* line 104, ../sass/partials/_page.scss */
+/* line 111, ../sass/partials/_page.scss */
 #nav_bar ul a:hover {
   text-decoration: underline;
 }
 
-/* line 110, ../sass/partials/_page.scss */
+/* line 117, ../sass/partials/_page.scss */
 .headlines {
   float: left;
   color: white;
@@ -474,19 +482,19 @@ header img {
   margin-top: 1em;
   /*height: $step6-gold-em;*/
 }
-/* line 118, ../sass/partials/_page.scss */
+/* line 125, ../sass/partials/_page.scss */
 .headlines h3 {
   font-size: 1.618em;
   padding: 0 0.618em;
 }
-/* line 122, ../sass/partials/_page.scss */
+/* line 129, ../sass/partials/_page.scss */
 .headlines p {
   /*@include ellipsis(wrap);*/
   padding: 0 1em;
-  font-family: 'SourceSansProRegular', sans-serif;
+  font-family: "LatoRegular", sans-serif;
 }
 
-/* line 130, ../sass/partials/_page.scss */
+/* line 137, ../sass/partials/_page.scss */
 #headline1 {
   /*@include border-white($step-3-gold-px);*/
   margin-top: 0.618em;
@@ -498,7 +506,7 @@ header img {
   text-align: justify;
 }
 
-/* line 134, ../sass/partials/_page.scss */
+/* line 141, ../sass/partials/_page.scss */
 #headline2 {
   /*@include border-white($step-3-gold-px);*/
   margin-top: 0.618em;
@@ -511,7 +519,7 @@ header img {
   text-align: justify;
 }
 
-/* line 139, ../sass/partials/_page.scss */
+/* line 146, ../sass/partials/_page.scss */
 #headline3 {
   /*@include border-white($step-3-gold-px);*/
   margin-top: 0.618em;
@@ -524,14 +532,14 @@ header img {
   text-align: justify;
 }
 
-/* line 144, ../sass/partials/_page.scss */
+/* line 151, ../sass/partials/_page.scss */
 #nav_side {
   border: 3.778px solid #2e63a9;
   position: relative;
   /*top: ($step2-gold-16)+($step8-gold-px);*/
   left: -21.223px;
   float: left;
-  margin: 0 2.618em 0 1em;
+  margin: 1em 2.618em 0 1em;
   padding: 1em 2.618em 1em 0;
   font-family: Verdana, sans-serif;
   background-color: white;
@@ -541,42 +549,43 @@ header img {
   clear: both;
   /*@include pretty-bullets('black-arrow-icon.png');*/
 }
-/* line 159, ../sass/partials/_page.scss */
+/* line 166, ../sass/partials/_page.scss */
 #nav_side li {
   list-style: none;
   /*  background-image: url(../images/black-arrow-icon.png)*/
 }
-/* line 164, ../sass/partials/_page.scss */
+/* line 171, ../sass/partials/_page.scss */
 #nav_side a {
   color: inherit;
   text-decoration: none;
 }
-/* line 167, ../sass/partials/_page.scss */
+/* line 174, ../sass/partials/_page.scss */
 #nav_side a:hover {
   text-decoration: underline;
 }
 
-/* line 173, ../sass/partials/_page.scss */
+/* line 180, ../sass/partials/_page.scss */
 #main {
   margin: 2.618em auto;
-  padding: 1.618em 1.618em 2.618em 0;
+  padding: 1.618em 1.618em 1em 0;
   color: #2e63a9;
   background-color: white;
   width: 76%;
-  font-family: Helvetica, sans-serif;
+  font-family: "LatoRegular", sans-serif;
 }
 
-/* line 182, ../sass/partials/_page.scss */
+/* line 189, ../sass/partials/_page.scss */
 #doneer_buttons {
   float: right;
   clear: both;
   position: relative;
   left: -11.089em;
+  top: 1em;
   font-family: Helvetica, sans-serif;
   font-weight: bold;
 }
 
-/* line 191, ../sass/partials/_page.scss */
+/* line 199, ../sass/partials/_page.scss */
 #doneer, #sponsor {
   -webkit-border-radius: 1em 1.618em;
   -moz-border-radius: 1em / 1.618em;
@@ -601,22 +610,22 @@ header img {
   -webkit-transition: all 1s ease 2s;
   -ms-transition: all 1s ease 2s;
   padding: 0.382em 1.618em;
-  margin: 0 0 0 1em;
+  margin: 2.335px 0 0 1em;
   display: inline-block;
 }
-/* line 198, ../sass/partials/_page.scss */
+/* line 206, ../sass/partials/_page.scss */
 #doneer:hover, #sponsor:hover {
   position: relative;
   left: 0.618px;
   top: 1.618px;
 }
-/* line 203, ../sass/partials/_page.scss */
+/* line 211, ../sass/partials/_page.scss */
 #doneer a, #sponsor a {
   color: white;
   text-decoration: none;
 }
 
-/* line 212, ../sass/partials/_page.scss */
+/* line 220, ../sass/partials/_page.scss */
 .main_content p {
   margin: 0 auto;
   overflow: hidden;
@@ -638,23 +647,64 @@ header img {
   column-gap: 2.618em;
   color: #333333;
   max-width: 80%;
+  max-height: 17.942em;
   position: relative;
   left: -2.618em;
   text-align: justify;
   text-indent: 1.618em;
   line-height: 1.4;
 }
-/* line 226, ../sass/partials/_page.scss */
+/* line 235, ../sass/partials/_page.scss */
 .main_content h2 {
   border-bottom: 1.443px solid #2e63a9;
-  padding: 1em 0 1em 1.618em;
+  padding: 2.618em 0 1em 1.618em;
   max-width: 68%;
+  color: #1d3d69;
 }
 
-/* line 238, ../sass/partials/_page.scss */
+/* line 248, ../sass/partials/_page.scss */
 #logo_header {
   float: left;
-  /*display: inline-block;*/
+}
+
+/* line 252, ../sass/partials/_page.scss */
+#ad_space {
+  height: 100%;
+  width: 12%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+}
+
+/*#bottom_line {
+  margin: 20px auto;
+  height: 10px;
+  width: 68%;
+  background-image: url(../images/blue_line.png);
+}*/
+/* line 269, ../sass/partials/_page.scss */
+#bottom_content {
+  overflow: hidden;
+  *zoom: 1;
+  width: 100%;
+  margin: 0 2.618em;
+  text-align: center;
+}
+
+/* line 276, ../sass/partials/_page.scss */
+.bottom_containers {
+  float: left;
+  width: 28%;
+  min-width: 14.867em;
+  padding: 1em;
+}
+/* line 281, ../sass/partials/_page.scss */
+.bottom_containers p {
+  padding: 1em;
+  background-image: url(../images/shattered_blue.png);
+  background-size: cover;
+  color: #4781cd;
 }
 
 /* line 7, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-h5bp-0.1.0/stylesheets/h5bp/_helpers.scss */
