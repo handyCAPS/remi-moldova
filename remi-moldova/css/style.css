@@ -759,21 +759,9 @@ header img {
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
-  -webkit-column-width: 36%;
-  -moz-column-width: 36%;
-  -ms-column-width: 36%;
-  -o-column-width: 36%;
-  column-width: 36%;
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  -ms-column-count: 2;
-  -o-column-count: 2;
-  column-count: 2;
-  -webkit-column-gap: 2.618em;
-  -moz-column-gap: 2.618em;
-  -ms-column-gap: 2.618em;
-  -o-column-gap: 2.618em;
-  column-gap: 2.618em;
+  /*@include column-width(36%);
+  @include column-count(2);
+  @include column-gap($step3-gold-em);*/
   color: #333333;
   max-width: 80%;
   max-height: 17.942em;
@@ -793,18 +781,38 @@ header img {
   font-size: 1.87688em;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (min-width: 960px) {
   /* line 301, ../sass/partials/_page.scss */
+  .main_content p {
+    -webkit-column-width: 36%;
+    -moz-column-width: 36%;
+    -ms-column-width: 36%;
+    -o-column-width: 36%;
+    column-width: 36%;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -ms-column-count: 2;
+    -o-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 2.618em;
+    -moz-column-gap: 2.618em;
+    -ms-column-gap: 2.618em;
+    -o-column-gap: 2.618em;
+    column-gap: 2.618em;
+  }
+}
+@media screen and (max-width: 840px) {
+  /* line 309, ../sass/partials/_page.scss */
   .main_content h2 {
     padding-top: 2.618em;
   }
 }
-/* line 310, ../sass/partials/_page.scss */
+/* line 318, ../sass/partials/_page.scss */
 #logo_header {
   float: left;
 }
 
-/* line 314, ../sass/partials/_page.scss */
+/* line 322, ../sass/partials/_page.scss */
 #ad_space {
   height: 100%;
   width: 12%;
@@ -820,7 +828,7 @@ header img {
   width: 68%;
   background-image: url(../images/blue_line.png);
 }*/
-/* line 331, ../sass/partials/_page.scss */
+/* line 339, ../sass/partials/_page.scss */
 #bottom_content {
   overflow: hidden;
   *zoom: 1;
@@ -829,14 +837,14 @@ header img {
   text-align: center;
 }
 
-/* line 338, ../sass/partials/_page.scss */
+/* line 346, ../sass/partials/_page.scss */
 .bottom_containers {
   float: left;
   width: 28%;
   min-width: 14.867em;
   padding: 1em;
 }
-/* line 343, ../sass/partials/_page.scss */
+/* line 351, ../sass/partials/_page.scss */
 .bottom_containers p {
   padding: 1em;
   background-image: url(../images/shattered_blue.png);
