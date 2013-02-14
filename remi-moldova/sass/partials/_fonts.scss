@@ -375,3 +375,75 @@
     
     }
 }
+
+@mixin font-face-colaborate-thin {
+    @font-face {
+        font-family: 'ColaborateThinRegular';
+        src: url('../fonts/Colaborate/ColabThi-webfont.eot');
+        src: url('../fonts/Colaborate/ColabThi-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Colaborate/ColabThi-webfont.woff') format('woff'),
+             url('../fonts/Colaborate/ColabThi-webfont.ttf') format('truetype'),
+             url('../fonts/Colaborate/ColabThi-webfont.svg#ColaborateThinRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+
+@mixin font-face-colaborate-light {    
+    @font-face {
+        font-family: 'ColaborateLightRegular';
+        src: url('../fonts/Colaborate/ColabLig-webfont.eot');
+        src: url('../fonts/Colaborate/ColabLig-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Colaborate/ColabLig-webfont.woff') format('woff'),
+             url('../fonts/Colaborate/ColabLig-webfont.ttf') format('truetype'),
+             url('../fonts/Colaborate/ColabLig-webfont.svg#ColaborateLightRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+
+@mixin font-face-colaborate-regular {    
+    @font-face {
+        font-family: 'ColaborateRegular';
+        src: url('../fonts/Colaborate/ColabReg-webfont.eot');
+        src: url('../fonts/Colaborate/ColabReg-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Colaborate/ColabReg-webfont.woff') format('woff'),
+             url('../fonts/Colaborate/ColabReg-webfont.ttf') format('truetype'),
+             url('../fonts/Colaborate/ColabReg-webfont.svg#ColaborateRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+
+@mixin font-face-colaborate-medium {    
+    @font-face {
+        font-family: 'ColaborateMediumRegular';
+        src: url('../fonts/Colaborate/ColabMed-webfont.eot');
+        src: url('../fonts/Colaborate/ColabMed-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Colaborate/ColabMed-webfont.woff') format('woff'),
+             url('../fonts/Colaborate/ColabMed-webfont.ttf') format('truetype'),
+             url('../fonts/Colaborate/ColabMed-webfont.svg#ColaborateMediumRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+
+@mixin font-face-colaborate-bold {    
+    @font-face {
+        font-family: 'ColaborateBoldRegular';
+        src: url('../fonts/Colaborate/ColabBol-webfont.eot');
+        src: url('../fonts/Colaborate/ColabBol-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/Colaborate/ColabBol-webfont.woff') format('woff'),
+             url('../fonts/Colaborate/ColabBol-webfont.ttf') format('truetype'),
+             url('../fonts/Colaborate/ColabBol-webfont.svg#ColaborateBoldRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+}
+
+
