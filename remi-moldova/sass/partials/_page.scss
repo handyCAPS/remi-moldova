@@ -5,6 +5,7 @@
 @include font-face-lato-regular;
 @include font-face-lato-bold;
 @include font-face-colaborate-regular;
+@include font-face-nobile-regular;
 
 //-----------------------------------------------
 // The following html5-boilerplate styles should
@@ -25,7 +26,7 @@ body, select, input, textarea {
 $main-font: 'LatoRegular', sans-serif;
 $main-font-bold: 'LatoBold', sans-serif;
 
-$nav-font: 'ColaborateRegular', sans-serif;
+$nav-font: 'NobileRegular', sans-serif;
 
 // ----------------------------------
 
@@ -37,10 +38,11 @@ $nav-font: 'ColaborateRegular', sans-serif;
 
 body {
     @include background-blue;
-
+    
 }
 
 #container {
+  
   position: relative;
   width: 90%;
   height: 100%;
@@ -49,6 +51,7 @@ body {
 }
 
 #site_name {
+  
   @include border-noleft($step-4-gold-px, $main-white);
   @include background-blue;
   /*border-left: $step-4-gold-px solid $main-blue;*/
@@ -88,6 +91,7 @@ header {
 }
 
 #logo {
+  
   position: absolute;
   top: ($step6-gold-px);
   /*left: 3.178*($step6-gold-px);*/
@@ -104,6 +108,7 @@ header {
 }
 
 #nav_bar ul {
+  
   @include horizontal-list-container;
   /*@include border-blue;*/
   @include border-nobottom-noleft($main-white,$step-2-gold-px);
@@ -111,7 +116,7 @@ header {
   @include background-blue;
   float: left;
   position: relative;
-  left: -$step-1-gold-px;
+  left: -($step-1-gold-px);
   clear: both;
   display: block;
   margin: 0 $step3-gold-em 0 $step-1-gold-em;
@@ -119,6 +124,7 @@ header {
   font-family: $nav-font;
   line-height: 1.4;
     li {
+      
       @include horizontal-list-item (0.344em, left);      
     }
     a {
@@ -131,7 +137,7 @@ header {
       padding: $step1-gold-em $step-1-gold-em $step-1-gold-em;
       color: lighten($main-blue, 38);
       text-shadow: 0.1px 0.4px darken($main-blue,16);
-      font-size: 1.1*($step1-gold-em);
+      /*font-size: 1.1*($step1-gold-em);*/
       text-decoration: none;
       opacity: 1;
         &:hover {
@@ -149,7 +155,7 @@ header {
     }
 }
 
-.headlines {
+.headlines {  
   float: left;
   color: $main-white;
   line-height: 1.112;
@@ -187,6 +193,7 @@ header {
 }
 
 #nav_side {
+  
   @include border-blue($step-2-gold-px);
   background: $main-white;
   position: relative;
@@ -198,6 +205,7 @@ header {
   line-height: 2.618;
   clear: both;
     li {
+      
       list-style: none;
       margin: $step-3-gold-em 0;
       position: relative;
@@ -217,6 +225,7 @@ header {
 }
 
 #main {
+  
   margin: $step3-gold-em auto;
   padding: $step2-gold-em $step2-gold-em $step1-gold-em 0;
   color: $main-blue;
@@ -226,7 +235,7 @@ header {
 }
 
 #doneer_buttons {
-  margin: $step2-gold-em $step3-gold-em;;
+  margin: $step2-gold-em $step3-gold-em;
 }
 
 #doneer, #sponsor {
@@ -243,8 +252,9 @@ header {
   top: 0px;
   left: 0px;
   text-transform: uppercase;
+  line-height: 1.618;
   &:hover {
-      color: lighten($main-blue, 56);
+      color: lighten($main-red, 0);
       text-shadow: 0.6px 0.4px 0.6px darken($main-blue,32);
       position: relative;
       left: 0.618px;
@@ -252,10 +262,15 @@ header {
       @include boxShadow($step-4-gold-em, $step-5-gold-em, $step-3-gold-em, darken($main-blue, 32));
     }
     a {
+      @include multi-transition(all, 0.3s, ease-in, 0.6s);
       color: lighten($main-blue, 38);
       text-shadow: 0.1px 0.4px darken($main-blue,16);
       text-decoration: none;
       font-family: $main-font-bold;
+        &:hover {
+          color: lighten($main-red, 16);
+          text-shadow: 0.3px 0.3px 1px darken($main-blue,38);
+        }
     }
     
 }
@@ -263,6 +278,7 @@ header {
 .main_content {
   
     p {
+      
       margin: 0 auto;
       @include clearfix;
       /*@include column-width(36%);
@@ -270,7 +286,7 @@ header {
       @include column-gap($step3-gold-em);*/
       color: darken($main-white, 80);
       max-width: 80%;
-      max-height: $step7-gold-em;
+      max-height: $step8-gold-em;
       position: relative;
       /*left: -($step3-gold-em);*/
       text-align: justify;
@@ -278,6 +294,7 @@ header {
       line-height: 1.4;
     }
     h2 {
+      
       @include border-bottom($main-blue, $step-5-gold-px);
       padding: $step1-gold-em 0 $step1-gold-em $step2-gold-em;
       max-width: 68%;
@@ -288,96 +305,7 @@ header {
     
 }
 
-@media screen and (max-width: 960px) {
-  #logo {
-    position: absolute;
-    top: ($step6-gold-px);
-    /*left: 3.178*($step6-gold-px);*/
-    left: 76%;
-  }
-}
 
-@media screen and (max-width: 480px) {
-  #logo {
-    position: absolute;
-    top: ($step6-gold-px);
-    /*left: 3.178*($step6-gold-px);*/
-    left: 42%;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .main_content p {
-    @include column-width(36%);
-    @include column-count(2);
-    @include column-gap($step3-gold-em);
-  }
-}
-
-@media screen and (min-width: 960px) and (max-width: 1280px) {
-  .main_content h2 {
-    padding-top: $step3-gold-em
-  }
-}
-
-@media screen and (min-width: 960px) {
-  #doneer_buttons {
-    @include multi-transition(all, 1s, ease, 2s);
-    float: right;
-    clear: both;
-    position: relative;
-    left: -($step6-gold-em);
-    top: $step1-gold-em;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .main_content p {
-    position: relative;
-    left: -($step3-gold-em);
-  }
-}
-
-@media screen and (max-width: 960px) {
-  #nav_side {
-    border: none;
-    position: absolue;
-    bottom: 0;
-    left: 0;
-    margin: 0 $step3-gold-em 0 $step1-gold-em;
-    padding: 0 $step-3-gold-em $step1-gold-em 0;
-    background-color: $main-white;
-    line-height: $step3-gold-em;
-    clear: both;
-      li {
-        list-style: none;
-        /*margin: $step-5-gold-em 0;*/
-        position: relative;
-        left: -(($linkser)+(1.2*($step-1-gold-px)));      
-      }
-        a {
-          /*@include gradient-lightblue-alpha;*/
-          @include multi-transition(all, 0.5s, linear, 0.3s);
-          padding: $step-1-gold-em 0 $step-1-gold-em $step-3-gold-em;
-          color: darken($main-blue,32);
-          font-family: $nav-font;
-          text-shadow: 0.1px 0.4px lighten($main-blue, 38);
-          text-decoration: none;
-            &:hover {
-              color: adjust-hue($main-blue, 13);
-            }
-        }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  #nav_side {
-    border: none;
-    position: absolue;
-    bottom: 0;
-    left: $step2-gold-em;
-  }
-}
 
 #front-page {
   
@@ -412,11 +340,13 @@ header {
 }
 
 .bottom_containers {
+  
   float: left;
   width: 28%;
   min-width: ($step-3-gold-16)+($step6-gold-em);
   padding: $step1-gold-em;
     p {
+      
       padding: $step1-gold-em;
       background-image: url(../images/shattered_blue.png);
       background-size: cover;

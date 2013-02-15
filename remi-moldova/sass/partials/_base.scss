@@ -83,6 +83,7 @@ $step9-gold-em: 46.971em;
 
 
 @mixin headliner {
+    @include multi-transition(all, 0.5s, linear, 0.3s);/*this is for testing*/
   /*@include border-white($step-3-gold-px);*/
   margin-top: $step-1-gold-em;
   width: 3.778*($step5-gold-em);
@@ -107,42 +108,46 @@ $step9-gold-em: 46.971em;
     border: $borderEdge solid $main-white;
 }
 
+@mixin border-sides($borderColor, $borderWidth, $borderStyle: solid) {
+    border-right: $borderWidth $borderStyle $borderColor;
+    border-left: $borderWidth $borderStyle $borderColor;
+}
 
 @mixin border-nosides($borderColor, $borderWidth, $borderStyle: solid) {
     border-top: $borderWidth $borderStyle $borderColor;
     border-bottom: $borderWidth $borderStyle $borderColor;
 }
 
-@mixin border-nobottom($borderColor, $borderWidth) {
-    border-top: $borderWidth solid $borderColor;
-    border-right: $borderWidth solid $borderColor;
-    border-left: $borderWidth solid $borderColor;
+@mixin border-nobottom($borderColor, $borderWidth, $borderStyle: solid) {
+    border-top: $borderWidth $borderStyle $borderColor;
+    border-right: $borderWidth $borderStyle $borderColor;
+    border-left: $borderWidth $borderStyle $borderColor;
 }
 
-@mixin border-noleft($borderColor, $borderWidth) {
-    border-top: $borderWidth solid $borderColor;
-    border-right: $borderWidth solid $borderColor;
-    border-bottom: $borderWidth solid $borderColor;
+@mixin border-noleft($borderColor, $borderWidth, $borderStyle: solid) {
+    border-top: $borderWidth $borderStyle $borderColor;
+    border-right: $borderWidth $borderStyle $borderColor;
+    border-bottom: $borderWidth $borderStyle $borderColor;
 }
 
-@mixin border-noright($borderColor, $borderWidth) {
-    border-top: $borderWidth solid $borderColor;
-    border-bottom: $borderWidth solid $borderColor;
-    border-left: $borderWidth solid $borderColor;
+@mixin border-noright($borderColor, $borderWidth, $borderStyle: solid) {
+    border-top: $borderWidth $borderStyle $borderColor;
+    border-bottom: $borderWidth $borderStyle $borderColor;
+    border-left: $borderWidth $borderStyle $borderColor;
 }
 
-@mixin border-nobottom-noleft($borderColor, $borderWidth) {
-    border-top: $borderWidth solid $borderColor;
-    border-right: $borderWidth solid $borderColor;
+@mixin border-nobottom-noleft($borderColor, $borderWidth, $borderStyle: solid) {
+    border-top: $borderWidth $borderStyle $borderColor;
+    border-right: $borderWidth $borderStyle $borderColor;
 }
 
-@mixin border-nobottom-noright($borderColor, $borderWidth) {
-    border-top: $borderWidth solid $borderColor;
-    border-left: $borderWidth solid $borderColor;
+@mixin border-nobottom-noright($borderColor, $borderWidth, $borderStyle: solid) {
+    border-top: $borderWidth $borderStyle $borderColor;
+    border-left: $borderWidth $borderStyle $borderColor;
 }
 
-@mixin border-bottom($borderColor, $borderWidth) {
-    border-bottom: $borderWidth solid $borderColor;
+@mixin border-bottom($borderColor, $borderWidth, $borderStyle: solid) {
+    border-bottom: $borderWidth $borderStyle $borderColor;
 }
 
 //----------------------------

@@ -26,3 +26,219 @@
   
   /* Style adjustments for print go here */
 }
+
+
+// ==|== Personal media queries ======================================================
+
+@media screen and (max-width: 960px) {
+  #logo {
+    position: absolute;
+    top: ($step6-gold-px);
+    /*left: 3.178*($step6-gold-px);*/
+    left: 76%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #logo {
+    position: absolute;
+    top: ($step6-gold-px);
+    /*left: 3.178*($step6-gold-px);*/
+    left: 42%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main_content p {
+    @include column-width(36%);
+    @include column-count(2);
+    @include column-gap($step3-gold-em);
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1280px) {
+  .main_content h2 {
+    padding-top: $step3-gold-em;
+    
+    }
+}
+
+@media screen and (max-width: 960px) {
+  .main_content h2 {
+    padding-top: $step5-gold-em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .main_content h2 {
+    padding-top: $step6-gold-em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+  .main_content h2 {
+    padding-top: ($step-4-gold-16)+($step5-gold-em);
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .main_content h2 {
+    padding-right: $step3-gold-em;
+    
+    }
+}
+
+@media screen and (min-width: 960px) {
+  #doneer_buttons {
+    @include multi-transition(all, 1s, ease, 2s);
+    float: right;
+    clear: both;
+    position: relative;
+    left: -($step6-gold-em);
+    top: $step1-gold-em;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .main_content p {
+    position: relative;
+    left: -($step3-gold-em);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #nav_bar ul {
+    @include horizontal-list-container;
+    /*@include border-blue;*/
+    @include border-nobottom-noleft($main-white,$step-2-gold-px);
+    @include background-blue;
+    float: left;
+    position: relative;
+    left: -($step-1-gold-px);
+    clear: both;
+    display: block;
+    margin: 0 $step3-gold-em 0 $step-1-gold-em;
+    padding: $step-1-gold-em $step-1-gold-em $step3-gold-em 0;
+    font-family: $nav-font;
+    line-height: 1.618;   
+      li {
+        /*@include horizontal-list-item (0.344em, left);*/      
+      }
+      a {
+        /*@include gradient-lightblue-alpha2;*/
+        @include border-radius($step-1-gold-em,$step-2-gold-em);
+        @include multi-transition(all, 0.5s, linear, 0.3s); 
+        position: relative;
+        top: 0px;
+        left: 0px;
+        padding: $step1-gold-em $step-1-gold-em $step-1-gold-em;
+        color: lighten($main-blue, 38);
+        text-shadow: 0.1px 0.4px darken($main-blue,16);
+        font-size: 1.1*($step-1-gold-em);
+        text-decoration: none;
+        opacity: 1;
+          &:hover {
+            /*@include gradient-blue;*/
+            @include border-radius($step3-gold-em,$step-1-gold-em);
+            position: relative;
+            top: -1px;
+            left: 2px;
+            padding: $step2-gold-em $step-1-gold-em $step-1-gold-em;
+            color: lighten($main-blue, 38);
+            text-shadow: 0.1px 0.4px darken($main-blue,16);
+            text-decoration: none;
+            opacity: 0.8;
+          }
+      }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #nav_side {
+    @include border-sides($main-blue, $step-3-gold-px, solid);
+    border-bottom: none;
+    border-top: none;
+    position: absolue;
+    top: $step1-gold-em;
+    left: 0;
+    margin: 0 $step3-gold-em 0 $step1-gold-em;
+    padding: 0 $step-3-gold-em 0 0;
+    background-color: $main-white;
+    line-height: $step3-gold-em;
+    clear: both;
+      li {
+        list-style: none;
+        margin: 0;
+        position: relative;
+        left: -(($linkser)+(1.2*($step-1-gold-px)));      
+      }
+        a {
+          /*@include gradient-lightblue-alpha;*/
+          @include multi-transition(all, 0.5s, linear, 0.3s);
+          padding: $step-1-gold-em 0 $step-1-gold-em $step-3-gold-em;
+          color: darken($main-blue,32);
+          font-family: $nav-font;
+          font-size: 0.8*($step1-gold-em);
+          text-shadow: 0.1px 0.4px lighten($main-blue, 38);
+          text-decoration: none;
+            &:hover {
+              color: adjust-hue($main-blue, 13);
+            }
+        }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #nav_side {
+    border: none;
+    position: absolue;
+    top: $step1-gold-em;
+    left: $step2-gold-em;
+    font-size: 0.8*($step1-gold-em);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .headlines {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #headline1 {
+    @include headliner;
+    @include gradient-lightblue-alpha2;
+  }
+  
+  #headline2 {
+    @include headliner;
+    @include gradient-lightblue-alpha2;
+    margin-left: $step1-gold-em;
+  }
+  
+  #headline3 {
+    @include headliner;
+    @include gradient-lightblue-alpha2;
+    margin-left: $step1-gold-em;
+  }                                             
+}
+
+@media screen and (max-width: 402px) {
+  #bottom_content {
+    @include clearfix;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 402px) {
+  #main {  
+    margin: $step1-gold-em auto;
+    padding: $step2-gold-em $step-1-gold-em $step1-gold-em 0;
+    color: $main-blue;
+    background-color: $main-white;
+    width: 90%;
+    font-family: $main-font;
+  }
+}
