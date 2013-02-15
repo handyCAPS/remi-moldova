@@ -108,14 +108,26 @@ $step9-gold-em: 46.971em;
 }
 
 
-@mixin border-nosides($borderColor, $borderWidth) {
-    border-top: $borderWidth solid $borderColor;
-    border-bottom: $borderWidth solid $borderColor;
+@mixin border-nosides($borderColor, $borderWidth, $borderStyle: solid) {
+    border-top: $borderWidth $borderStyle $borderColor;
+    border-bottom: $borderWidth $borderStyle $borderColor;
 }
 
 @mixin border-nobottom($borderColor, $borderWidth) {
     border-top: $borderWidth solid $borderColor;
     border-right: $borderWidth solid $borderColor;
+    border-left: $borderWidth solid $borderColor;
+}
+
+@mixin border-noleft($borderColor, $borderWidth) {
+    border-top: $borderWidth solid $borderColor;
+    border-right: $borderWidth solid $borderColor;
+    border-bottom: $borderWidth solid $borderColor;
+}
+
+@mixin border-noright($borderColor, $borderWidth) {
+    border-top: $borderWidth solid $borderColor;
+    border-bottom: $borderWidth solid $borderColor;
     border-left: $borderWidth solid $borderColor;
 }
 

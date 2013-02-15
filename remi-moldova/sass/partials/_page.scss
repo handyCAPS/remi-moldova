@@ -49,9 +49,9 @@ body {
 }
 
 #site_name {
-  @include border-white($step-4-gold-px);
+  @include border-noleft($step-4-gold-px, $main-white);
   @include background-blue;
-  border-left: $step-4-gold-px solid $main-blue;
+  /*border-left: $step-4-gold-px solid $main-blue;*/
   padding-right: $step-2-gold-em;
   text-align: center;
   position: absolute;
@@ -89,8 +89,9 @@ header {
 
 #logo {
   position: absolute;
-  top: $step6-gold-px;
-  left: 3.178*($step6-gold-px);
+  top: ($step6-gold-px);
+  /*left: 3.178*($step6-gold-px);*/
+  left: 48%;
 }
 
 #slideshow {
@@ -186,36 +187,31 @@ header {
 }
 
 #nav_side {
-  @include border-nobottom-noright($step-1-gold-px, $main-white);
-  @include background-blue;
+  @include border-blue($step-2-gold-px);
+  background: $main-white;
   position: relative;
-  /*top: ($step2-gold-16)+($step8-gold-px);*/
-  /*left: -(($linkser)+($step-3-gold-px));*/
-  left: -((2*($step-2-gold-px))+(0.5)+($step-2-gold-16));
+  left: -($step2-gold-em);
   float: left;
-  margin: $step-1-gold-em $step3-gold-em 0 $step1-gold-em;
- /* padding-right: $step1-gold-em;*/
+  margin: 0 $step3-gold-em 0 $step1-gold-em;
+  padding: $step1-gold-em $step3-gold-em $step1-gold-em 0;
   background-color: $main-white;
-  color: inherit;
   line-height: 2.618;
   clear: both;
-  /*@include pretty-bullets('black-arrow-icon.png');*/
     li {
       list-style: none;
-      margin: $step-2-gold-em 0;
+      margin: $step-3-gold-em 0;
       position: relative;
-      left: -(($linkser)+(1.2*($step-1-gold-px)));
-      
-    /*  background-image: url(../images/black-arrow-icon.png)*/
+      left: -(($linkser)+(1.2*($step-1-gold-px)));      
     }
       a {
-        /*@include gradient-lightblue-alpha;*/
+        @include multi-transition(all, 0.5s, linear, 0.3s);
         padding: $step-1-gold-em 0 $step-1-gold-em $step-3-gold-em;
-        color: lighten($main-blue, 38);
-        text-shadow: 0.1px 0.4px darken($main-blue,32);
+        color: darken($main-blue,32);
+        font-family: $nav-font;
+        text-shadow: 0.1px 0.4px lighten($main-blue, 38);
         text-decoration: none;
           &:hover {
-            text-decoration: underline;
+            color: adjust-hue($main-blue, 13);
           }
       }
 }
@@ -230,12 +226,7 @@ header {
 }
 
 #doneer_buttons {
-  @include multi-transition(all, 1s, ease, 2s);
-  float: right;
-  clear: both;
-  position: relative;
-  left: -($step6-gold-em);
-  top: $step1-gold-em;
+  margin: $step2-gold-em $step3-gold-em;;
 }
 
 #doneer, #sponsor {
@@ -281,7 +272,7 @@ header {
       max-width: 80%;
       max-height: $step7-gold-em;
       position: relative;
-      left: -($step3-gold-em);
+      /*left: -($step3-gold-em);*/
       text-align: justify;
       text-indent: $step2-gold-em;
       line-height: 1.4;
@@ -297,6 +288,24 @@ header {
     
 }
 
+@media screen and (max-width: 960px) {
+  #logo {
+    position: absolute;
+    top: ($step6-gold-px);
+    /*left: 3.178*($step6-gold-px);*/
+    left: 76%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #logo {
+    position: absolute;
+    top: ($step6-gold-px);
+    /*left: 3.178*($step6-gold-px);*/
+    left: 42%;
+  }
+}
+
 @media screen and (min-width: 960px) {
   .main_content p {
     @include column-width(36%);
@@ -305,9 +314,68 @@ header {
   }
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (min-width: 960px) and (max-width: 1280px) {
   .main_content h2 {
     padding-top: $step3-gold-em
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #doneer_buttons {
+    @include multi-transition(all, 1s, ease, 2s);
+    float: right;
+    clear: both;
+    position: relative;
+    left: -($step6-gold-em);
+    top: $step1-gold-em;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .main_content p {
+    position: relative;
+    left: -($step3-gold-em);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #nav_side {
+    border: none;
+    position: absolue;
+    bottom: 0;
+    left: 0;
+    margin: 0 $step3-gold-em 0 $step1-gold-em;
+    padding: 0 $step-3-gold-em $step1-gold-em 0;
+    background-color: $main-white;
+    line-height: $step3-gold-em;
+    clear: both;
+      li {
+        list-style: none;
+        /*margin: $step-5-gold-em 0;*/
+        position: relative;
+        left: -(($linkser)+(1.2*($step-1-gold-px)));      
+      }
+        a {
+          /*@include gradient-lightblue-alpha;*/
+          @include multi-transition(all, 0.5s, linear, 0.3s);
+          padding: $step-1-gold-em 0 $step-1-gold-em $step-3-gold-em;
+          color: darken($main-blue,32);
+          font-family: $nav-font;
+          text-shadow: 0.1px 0.4px lighten($main-blue, 38);
+          text-decoration: none;
+            &:hover {
+              color: adjust-hue($main-blue, 13);
+            }
+        }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #nav_side {
+    border: none;
+    position: absolue;
+    bottom: 0;
+    left: $step2-gold-em;
   }
 }
 
