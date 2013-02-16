@@ -37,6 +37,9 @@
     /*left: 3.178*($step6-gold-px);*/
     left: 76%;
   }
+  .main_content h2 {
+    padding-top: $step5-gold-em;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -45,6 +48,24 @@
     top: ($step6-gold-px);
     /*left: 3.178*($step6-gold-px);*/
     left: 42%;
+  }
+  #site_name {
+    position: relative;
+    top: 0;
+  }
+  header {
+    margin-top: 0;
+  }
+  #logo {
+    display: none;
+  }
+  #nav_bar ul {
+    position: absolute;
+    display: block;
+    margin-top: $step3-gold-em;
+  }
+  #container {
+    width: 100%;
   }
 }
 
@@ -64,9 +85,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .main_content h2 {
-    padding-top: $step5-gold-em;
-    }
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -79,6 +98,9 @@
   .main_content h2 {
     padding-top: ($step-4-gold-16)+($step5-gold-em);
     }
+  #slideshow {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 200px) and (max-width: 600px) {
@@ -151,9 +173,6 @@
           }
       }
   }
-}
-
-@media screen and (max-width: 800px) {
   #nav_side {
     @include border-sides($main-blue, $step-3-gold-px, solid);
     border-bottom: none;
@@ -188,13 +207,20 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  
+}
+
 @media screen and (max-width: 400px) {
-  #nav_side {
+  #nav_side {    
     border: none;
     position: absolue;
     top: $step1-gold-em;
     left: $step2-gold-em;
     font-size: 0.8*($step1-gold-em);
+      li {
+        @include border-nosides($main-blue, $step-5-gold-em, dotted);
+      }
   }
 }
 

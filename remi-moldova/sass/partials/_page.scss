@@ -51,7 +51,7 @@ body {
 }
 
 #site_name {
-  
+  @include multi-transition(all, 0.5s, linear, 0.3s);
   @include border-noleft($step-4-gold-px, $main-white);
   @include background-blue;
   /*border-left: $step-4-gold-px solid $main-blue;*/
@@ -63,7 +63,7 @@ body {
   font-weight: normal;
   letter-spacing: 3px;
   top: $step4-gold-em;
-  /*left: -($step-4-gold-px);*/
+  z-index: 10000;
       h1 {
       margin: 0;
       padding: $step-3-gold-em $step-3-gold-em $step-5-gold-em $step-3-gold-em;
@@ -86,7 +86,7 @@ header {
       margin: $step2-gold-em $step1-gold-em $step2-gold-em 0;
     }
 }
-.slideshow {
+.slideshow_container {
     @include clearfix;
 }
 
@@ -96,6 +96,7 @@ header {
   top: ($step6-gold-px);
   /*left: 3.178*($step6-gold-px);*/
   left: 48%;
+  z-index: 10000;
 }
 
 #slideshow {
@@ -244,7 +245,7 @@ header {
   @include multi-transition(all, 0.3s, linear, 0.2s);
   @include boxShadow($step-3-gold-em, $step-4-gold-em, $step-2-gold-em, darken($main-blue, 32));
   padding: $step-2-gold-em $step1-gold-em;
-  margin: $step-3-gold-px 0 0 $step1-gold-em;
+  margin: $step1-gold-px 0 0 $step1-gold-em;
   display: inline-block;
   position: relative;
   color: lighten($main-blue, 38);
@@ -267,6 +268,7 @@ header {
       text-shadow: 0.1px 0.4px darken($main-blue,16);
       text-decoration: none;
       font-family: $main-font-bold;
+      font-size: 0.92*($step1-gold-em);
         &:hover {
           color: lighten($main-red, 16);
           text-shadow: 0.3px 0.3px 1px darken($main-blue,38);
