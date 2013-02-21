@@ -200,7 +200,7 @@ header {
   position: relative;
   left: -($step2-gold-em);
   float: left;
-  margin: 0 $step3-gold-em 0 $step1-gold-em;
+  margin: 0 $step1-gold-em 0 $step1-gold-em;
   padding: $step1-gold-em $step3-gold-em $step1-gold-em 0;
   background-color: $main-white;
   line-height: 2.618;
@@ -234,6 +234,7 @@ header {
   width: 76%;
   font-family: $main-font;
 }
+
 
 #doneer_buttons {
   margin: $step2-gold-em $step3-gold-em;
@@ -280,20 +281,15 @@ header {
 .main_content {
   
     p {
-      
-      margin: 0 auto;
       @include clearfix;
-      /*@include column-width(36%);
-      @include column-count(2);
-      @include column-gap($step3-gold-em);*/
       color: darken($main-white, 80);
-      max-width: 80%;
-      max-height: $step8-gold-em;
+      min-width: 46%;
+      min-height: $step8-gold-em;
       position: relative;
-      /*left: -($step3-gold-em);*/
       text-align: justify;
       text-indent: $step2-gold-em;
       line-height: 1.4;
+      padding: $step1-gold-em;
     }
     h2 {
       
@@ -317,22 +313,28 @@ header {
   float: left;
 }
 
-#ad_space {
-  height: 100%;
-  width: 12%;
-  position: fixed;
-  top: 0;
-  right: 0;
+#sponsors {
+  @include border-blue($step-3-gold-em);
+  float: right;
+  width: 1.2*($step6-gold-em);
+  min-height: $step8-gold-em;
+  position: relative;
+  left: $step2-gold-em;
+  top: $step4-gold-em;
   background-color: $main-white;
-  
+  padding: $step-3-gold-em $step1-gold-em;
+  margin-bottom: $step2-gold-em;
+    h2 {
+      @include gradient-blue2;
+      border-radius: $step-1-gold-em;
+      color: lighten($main-blue, 46);
+      text-shadow: 0.1px 0.4px darken($main-blue,34);
+      padding: $step-2-gold-em;
+      text-align: center;
+      font-family: $main-font;
+      font-size: $step1-gold-em;
+    }
 }
-
-/*#bottom_line {
-  margin: 20px auto;
-  height: 10px;
-  width: 68%;
-  background-image: url(../images/blue_line.png);
-}*/
 
 #bottom_content {
   @include clearfix;
@@ -356,4 +358,12 @@ header {
     }
 }
 
-footer {}
+footer {
+  width: 100%;
+  min-height: $step7-gold-em;
+  background-color: darken($main-blue, 6);
+  color: lighten($main-blue, 48);
+    p {
+      padding: $step2-gold-em;
+    }
+}
