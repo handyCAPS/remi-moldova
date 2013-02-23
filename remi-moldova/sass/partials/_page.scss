@@ -41,6 +41,11 @@ body {
     
 }
 
+b {
+  font-family: $main-font-bold;
+  font-weight: normal;
+}
+
 #container {
   
   position: relative;
@@ -130,14 +135,14 @@ header {
     }
     a {
       @include gradient-lightblue-alpha2;
-      @include border-radius($step-1-gold-em,$step-2-gold-em);
+      border-radius: $step-1-gold-em,$step-2-gold-em;
       @include multi-transition(all, 0.5s, linear, 0.3s); 
       position: relative;
       top: 0px;
       left: 0px;
       padding: $step1-gold-em $step-1-gold-em $step-1-gold-em;
       color: lighten($main-blue, 38);
-      text-shadow: 0.1px 0.4px darken($main-blue,16);
+      text-shadow: 0.1px 0.4px darken($main-blue, 38);
       /*font-size: 1.1*($step1-gold-em);*/
       text-decoration: none;
       opacity: 1;
@@ -148,7 +153,7 @@ header {
           top: -1px;
           left: 2px;
           padding: $step2-gold-em $step-1-gold-em $step-1-gold-em;
-          color: lighten($main-blue, 38);
+          color: lighten($main-blue, 68);
           text-shadow: 0.1px 0.4px darken($main-blue,16);
           text-decoration: none;
           opacity: 0.8;
@@ -193,34 +198,47 @@ header {
   margin-left: $step6-gold-em;
 }
 
-#nav_side {
-  
+#nav_side { 
   @include border-blue($step-2-gold-px);
-  background: $main-white;
+  background-color: $main-white;
+  /*background-image: url(../images/blue-grunge-small-alpha.jpg);*/
+  background-repeat: repeat-y;
   position: relative;
   left: -($step2-gold-em);
   float: left;
   margin: 0 $step1-gold-em 0 $step1-gold-em;
-  padding: $step1-gold-em $step3-gold-em $step1-gold-em 0;
+  /*padding: $step1-gold-em $step3-gold-em $step1-gold-em 0;*/
   background-color: $main-white;
   line-height: 2.618;
   clear: both;
     li {
-      
+      @include multi-transition(all, 0.5s, ease-out, 0.5s);
+      /*@include gradient-blue3;*/
+      @include border-radius($step-2-gold-em, $step-3-gold-em);
+      @include boxShadow($step-3-gold-em, $step-4-gold-em, $step-5-gold-em, darken($main-blue, 32));
+      background-image: url(../images/blue-grunge-small.jpg);
       list-style: none;
-      margin: $step-3-gold-em 0;
+      margin: $step-2-gold-em 0;
       position: relative;
-      left: -(($linkser)+(1.2*($step-1-gold-px)));      
+      left: -(($linkser)+(1.6*($step-1-gold-px)));
+        &:hover {
+          @include boxShadow($step-5-gold-em, $step-4-gold-em, $step-5-gold-em, darken($main-blue, 68));
+          position: relative;
+          left: -($step-2-gold-em);
+        }
     }
       a {
         @include multi-transition(all, 0.5s, linear, 0.3s);
-        padding: $step-1-gold-em 0 $step-1-gold-em $step-3-gold-em;
-        color: darken($main-blue,32);
+        padding: $step-5-gold-em $step2-gold-em $step-5-gold-em $step1-gold-em;
+        color: lighten($main-blue,46);
         font-family: $nav-font;
-        text-shadow: 0.1px 0.4px lighten($main-blue, 38);
+        text-shadow: 0.1px 0.4px darken($main-blue, 38);
         text-decoration: none;
+        position: relative;
           &:hover {
-            color: adjust-hue($main-blue, 13);
+            /*color: darken(adjust-hue($main-blue, 13), 12);*/
+            text-shadow: 0.1px 0.4px 2px darken($main-blue, 52);
+            position: relative;
           }
       }
 }
@@ -241,10 +259,10 @@ header {
 }
 
 #doneer, #sponsor {
-  @include border-radius($step1-gold-em,$step2-gold-em);
   @include gradient-lightblue;
   @include multi-transition(all, 0.3s, linear, 0.2s);
   @include boxShadow($step-3-gold-em, $step-4-gold-em, $step-2-gold-em, darken($main-blue, 32));
+  @include border-radius($step1-gold-em,$step2-gold-em);
   padding: $step-2-gold-em $step1-gold-em;
   margin: $step1-gold-px 0 0 $step1-gold-em;
   display: inline-block;
@@ -282,7 +300,7 @@ header {
   
     p {
       @include clearfix;
-      color: darken($main-white, 80);
+      color: darken($main-blue, 34);
       min-width: 46%;
       min-height: $step8-gold-em;
       position: relative;
@@ -290,11 +308,15 @@ header {
       text-indent: $step2-gold-em;
       line-height: 1.4;
       padding: $step1-gold-em;
+        .thumbnail {
+          float: left;
+          padding: 0 $step2-gold-em $step1-gold-em 0;
+        }
     }
     h2 {
       
       @include border-bottom($main-blue, $step-5-gold-px);
-      padding: $step1-gold-em 0 $step1-gold-em $step2-gold-em;
+      padding: $step2-gold-em 0 $step1-gold-em $step2-gold-em;
       max-width: 68%;
       color: $comp1-main-blue;
       font-family: $main-font-bold;
@@ -303,7 +325,10 @@ header {
     
 }
 
-
+.thumbnail {
+  width: 160px;
+  height: 160px;
+}
 
 #front-page {
   
@@ -325,7 +350,7 @@ header {
   padding: $step-3-gold-em $step1-gold-em;
   margin-bottom: $step2-gold-em;
     h2 {
-      @include gradient-blue2;
+      @include gradient-lightblue-horizontal;
       border-radius: $step-1-gold-em;
       color: lighten($main-blue, 46);
       text-shadow: 0.1px 0.4px darken($main-blue,34);
