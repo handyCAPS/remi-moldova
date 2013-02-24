@@ -110,15 +110,12 @@ header {
   left: -($step3-gold-em);
   top: -($step2-gold-em);*/
   float: left;
-  /*border: $step-1-gold-px solid $main-white;*/
 }
 
 #nav_bar ul {
   
   @include horizontal-list-container;
-  /*@include border-blue;*/
   @include border-nobottom-noleft($main-white,$step-2-gold-px);
-  /*@include gradient-lightblue;*/
   @include background-blue;
   float: left;
   position: relative;
@@ -147,7 +144,6 @@ header {
       text-decoration: none;
       opacity: 1;
         &:hover {
-          /*@include gradient-blue;*/
           @include border-radius($step3-gold-em,$step-1-gold-em);
           position: relative;
           top: -1px;
@@ -201,7 +197,6 @@ header {
 #nav_side { 
   @include border-blue($step-2-gold-px);
   background-color: $main-white;
-  /*background-image: url(../images/blue-grunge-small-alpha.jpg);*/
   background-repeat: repeat-y;
   position: relative;
   left: -($step2-gold-em);
@@ -236,7 +231,6 @@ header {
         text-decoration: none;
         position: relative;
           &:hover {
-            /*color: darken(adjust-hue($main-blue, 13), 12);*/
             text-shadow: 0.1px 0.4px 2px darken($main-blue, 52);
             position: relative;
           }
@@ -297,18 +291,21 @@ header {
 }
 
 .main_content {
-  
+  min-height: $step8-gold-em;
+  padding: 0 $step2-gold-em;
     p {
       @include clearfix;
       color: darken($main-blue, 34);
       min-width: 46%;
-      min-height: $step8-gold-em;
+      max-width: $step9-gold-em;
       position: relative;
-      text-align: justify;
-      text-indent: $step2-gold-em;
+      text-align: justify;      
       line-height: 1.4;
-      padding: $step1-gold-em;
-        .thumbnail {
+      padding: $step-3-gold-em $step2-gold-em;
+        &:first-child {
+          text-indent: $step2-gold-em;
+        }
+        .inlineImage {
           float: left;
           padding: 0 $step2-gold-em $step1-gold-em 0;
         }
@@ -351,7 +348,7 @@ header {
   margin-bottom: $step2-gold-em;
     h2 {
       @include gradient-lightblue-horizontal;
-      border-radius: $step-1-gold-em;
+      @include border-radius($step-3-gold-em, $step-1-gold-em);
       color: lighten($main-blue, 46);
       text-shadow: 0.1px 0.4px darken($main-blue,34);
       padding: $step-2-gold-em;
@@ -359,23 +356,29 @@ header {
       font-family: $main-font;
       font-size: $step1-gold-em;
     }
+    .sponsorImage {
+      margin: 0 auto;
+      padding: $step-2-gold-em;
+    }
 }
 
 #bottom_content {
+  position: relative;
   @include clearfix;
   width: 100%;
-  margin: 0 $step3-gold-em;
+  margin: 0 auto;
+  padding: $step1-gold-em $step2-gold-em;
   text-align: center;
 }
 
 .bottom_containers {
-  
-  float: left;
+  margin: 0 auto;
+  display: inline-block;
   width: 28%;
   min-width: ($step-3-gold-16)+($step6-gold-em);
-  padding: $step1-gold-em;
+  padding: 0 $step1-gold-em;
     p {
-      
+      text-align: justify;
       padding: $step1-gold-em;
       background-image: url(../images/shattered_blue.png);
       background-size: cover;
@@ -384,11 +387,45 @@ header {
 }
 
 footer {
-  width: 100%;
-  min-height: $step7-gold-em;
+  @include clearfix;
+  margin: 0 auto;
+  width: 90%;
+  padding: $step2-gold-em;
+  min-height: $step7-gold-em;  
   background-color: darken($main-blue, 6);
   color: lighten($main-blue, 48);
-    p {
-      padding: $step2-gold-em;
+    img {
+      @include border-white($step-1-gold-em);
+      margin: $step2-gold-em 0;
+       .thumbnail {
+        width: 160px;
+        height: 160px;
+       }
     }
+    p {
+      text-align: justify;
+        
+    }
+    li {
+      padding: 0 0 $step2-gold-em 0;
+      font-family: $nav-font;
+      list-style: none;
+        li {
+          list-style: disc;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+        }
+    }
+    .col3 {
+      text-align: center;
+    }
+}
+
+.imageFit {
+  width: 96%;
 }

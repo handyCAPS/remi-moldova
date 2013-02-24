@@ -85,7 +85,9 @@
 }
 
 @media screen and (max-width: 960px) {
-  
+  #sponsors {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
