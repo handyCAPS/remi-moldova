@@ -52,6 +52,7 @@ b {
   width: 90%;
   height: 100%;
   margin: 0 auto;
+  padding-top: $step-1-gold-em;
 
 }
 
@@ -84,7 +85,7 @@ b {
 
 header {
   position: relative;
-  margin: ($step4-gold-em)-($step3-gold-em) auto 0;
+  margin: 0 auto;
   width: 100%;
   @include background-blue;
     img {
@@ -162,7 +163,7 @@ header {
   color: $main-white;
   line-height: 1.112;
   font-size: ($step-1-gold-em);
-  margin-top: 1em;
+  // margin-top: 1em;
   
   /*height: $step6-gold-em;*/
     h3 {
@@ -239,7 +240,7 @@ header {
 
 #main {
   
-  margin: $step3-gold-em auto;
+  margin: $step-1-gold-em auto;
   padding: $step2-gold-em $step2-gold-em $step1-gold-em 0;
   color: $main-blue;
   background-color: $main-white;
@@ -248,7 +249,7 @@ header {
 }
 
 
-#doneer_buttons {
+#doneer_buttons {.
   margin: $step2-gold-em $step3-gold-em;
 }
 
@@ -259,20 +260,21 @@ header {
   @include border-radius($step1-gold-em,$step2-gold-em);
   padding: $step-2-gold-em $step1-gold-em;
   margin: $step1-gold-px 0 0 $step1-gold-em;
-  display: inline-block;
+  display: block;
   position: relative;
   color: lighten($main-blue, 38);
   text-shadow: 0.1px 0.4px darken($main-blue,16);
-  top: 0px;
-  left: 0px;
+  top: -$step1-gold-px;
+  left: 0;
   text-transform: uppercase;
+  text-align: center;
   line-height: 1.618;
   &:hover {
       color: lighten($main-red, 0);
       text-shadow: 0.6px 0.4px 0.6px darken($main-blue,32);
       position: relative;
       left: 0.618px;
-      top: 1.618px;
+      top: 1.618+(-($step1-gold-px));
       @include boxShadow($step-4-gold-em, $step-5-gold-em, $step-3-gold-em, darken($main-blue, 32));
     }
     a {
@@ -311,13 +313,14 @@ header {
         }
     }
     h2 {
-      
       @include border-bottom($main-blue, $step-5-gold-px);
       padding: $step2-gold-em 0 $step1-gold-em $step2-gold-em;
       max-width: 68%;
       color: $comp1-main-blue;
-      font-family: $main-font-bold;
-      font-size: 1.16*($step2-gold-em);
+      font-family: $nav-font;
+      font-size: $step3-gold-em;
+      margin: $step-1-gold-em;
+      padding: $step-2-gold-em $step-2-gold-em $step1-gold-em;
     }
     
 }
@@ -349,6 +352,7 @@ header {
     h2 {
       @include gradient-lightblue-horizontal;
       @include border-radius($step-3-gold-em, $step-1-gold-em);
+      @include boxShadow(2.6px, 2px, 2.6px);
       color: lighten($main-blue, 46);
       text-shadow: 0.1px 0.4px darken($main-blue,34);
       padding: $step-2-gold-em;
@@ -387,9 +391,10 @@ header {
 }
 
 footer {
+  @include borderBoxFixed;
   @include clearfix;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   padding: $step2-gold-em;
   min-height: $step7-gold-em;  
   background-color: darken($main-blue, 6);

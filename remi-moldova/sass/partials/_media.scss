@@ -79,7 +79,7 @@
 
 @media screen and (min-width: 960px) and (max-width: 1280px) {
   .main_content h2 {
-    padding-top: $step3-gold-em;
+    padding-top: $step-3-gold-em;
     
     }
 }
@@ -87,6 +87,9 @@
 @media screen and (max-width: 960px) {
   #sponsors {
     display: none;
+  }
+    #doneer, #sponsor {
+    display: inline-block;
   }
 }
 
@@ -121,6 +124,7 @@
     left: -($step6-gold-em);
     top: $step1-gold-em;
   }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -172,35 +176,57 @@
     @include border-sides($main-blue, $step-3-gold-px, solid);
     border-bottom: none;
     border-top: none;
-    position: absolue;
+    position: relative;
     top: $step1-gold-em;
     left: 0;
-    margin: 0 $step3-gold-em 0 $step1-gold-em;
+    margin: 0 auto;
     padding: 0 $step-3-gold-em 0 0;
     background-color: $main-white;
     line-height: $step3-gold-em;
     clear: both;
       li {
+        width: $step7-gold-em;
         list-style: none;
-        margin: 0;
+        margin: $step-1-gold-em auto;
         position: relative;
-        left: -(($linkser)+(1.2*($step-1-gold-px)));      
+        text-align: center;
+        // left: -(($linkser)+(1.2*($step-1-gold-px)));      
       }
         a {
           /*@include gradient-lightblue-alpha;*/
+          @include text-shadow(0.2px 0.2px lighten($main-blue, 32));
           @include multi-transition(all, 0.5s, linear, 0.3s);
-          padding: $step-1-gold-em 0 $step-1-gold-em $step-3-gold-em;
+          padding: $step1-gold-em 0 $step-1-gold-em $step-3-gold-em;
           color: darken($main-blue,32);
           font-family: $nav-font;
-          font-size: 0.8*($step1-gold-em);
-          text-shadow: 0.1px 0.4px lighten($main-blue, 38);
+          font-size: $step1-gold-em;
+          text-shadow: 0.1px 0.4px lighten($main-blue, 16);
           text-decoration: none;
             &:hover {
-              color: adjust-hue($main-blue, 13);
+              color: lighten($main-blue, 13);
             }
         }
   }
+
+  #front_page {
+    width: 100%;
+      p {
+        padding: $step-1-gold-em;
+      }
+  }
+  .threecol .col1, .threecol .col2, .threecol .col3 {
+    width: 100%;
+    left: 0;
+  }
+  .threecol .colmid, .threecol .colleft {
+    right: 0;
+  }
+  .threecol .colleft {
+    text-align: center;
+  }
 }
+
+
 
 @media screen and (max-width: 800px) {
   

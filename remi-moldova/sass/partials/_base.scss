@@ -95,7 +95,13 @@ $step9-gold-em: 46.971em;
         }    
 }
 
-
+@mixin borderBoxFixed {
+    box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box; /* Safari */
+-o-box-sizing:border-box;
+-ms-box-sizing:border-box;
+}
 //----------------------------
 // Borders
 
@@ -157,7 +163,7 @@ $step9-gold-em: 46.971em;
 
 //----------------------------
 
-@mixin boxShadow($h-shadow, $v-shadow, $blur, $shadowColor) {
+@mixin boxShadow($h-shadow: 0, $v-shadow: 0, $blur: 0, $shadowColor: darken($main-blue, 42)) {
     box-shadow: $h-shadow $v-shadow $blur $shadowColor;
 }
 
